@@ -23,3 +23,8 @@
 hs_err_pid*
 /IT-Showcase/nbproject/private/
 /nbproject/private/
+/build/
+/dist/
+/WebApplication1/nbproject/private/
+/WebApplication1/build/
+/WebApplication1/dist/
