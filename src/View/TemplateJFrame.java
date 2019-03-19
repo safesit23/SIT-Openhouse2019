@@ -30,7 +30,12 @@ public class TemplateJFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("IT OPENHOUSE 2019");
+        setMaximumSize(new java.awt.Dimension(846, 602));
+        setMinimumSize(new java.awt.Dimension(846, 602));
         setName("IT OPENHOUSE 2019"); // NOI18N
+        setPreferredSize(new java.awt.Dimension(846, 602));
+        setSize(new java.awt.Dimension(846, 602));
 
         jPanel1.setBackground(new java.awt.Color(51, 102, 153));
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
