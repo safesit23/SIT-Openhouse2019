@@ -28,3 +28,5 @@ hs_err_pid*
 /WebApplication1/nbproject/private/
 /WebApplication1/build/
 /WebApplication1/dist/
+src/View/TestClass02.form
+src/View/TestClass02.java
