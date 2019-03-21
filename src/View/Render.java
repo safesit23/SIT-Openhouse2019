@@ -15,8 +15,7 @@ public class Render {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        newBPrimeNumberChecker.main(args);
+        HomePage.main(args);
     }
     
 }
