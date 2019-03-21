@@ -35,6 +35,7 @@ public class TemplateJFrame extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(846, 602));
         setMinimumSize(new java.awt.Dimension(846, 602));
         setName("IT OPENHOUSE 2019"); // NOI18N
+        setResizable(false);
         setSize(new java.awt.Dimension(846, 602));
 
         kGradientPanel1.setkEndColor(new java.awt.Color(153, 153, 255));
