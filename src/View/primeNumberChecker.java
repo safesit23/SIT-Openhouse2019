@@ -414,11 +414,11 @@ public class primeNumberChecker extends javax.swing.JFrame {
         int num = Integer.parseInt(str1);
         int flag = 0;
         for (int i = 2; i < num; i++) {
-//                if (num % i ==0) {
-//                    flag = 1;
+                if (num % i ==0) {
+                    flag = 1;
 //                    area.setText(area.getText() + "\n" + num + "Divided by "+ i);
 //                    
-//                }
+               }
         }
         if (flag == 0) {
             output1.setText("\n" + num);
