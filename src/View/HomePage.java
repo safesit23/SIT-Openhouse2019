@@ -43,6 +43,7 @@ public class HomePage extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(846, 602));
         setMinimumSize(new java.awt.Dimension(846, 602));
         setName("IT OPENHOUSE 2019"); // NOI18N
+        setResizable(false);
         setSize(new java.awt.Dimension(846, 602));
 
         kGradientPanel1.setkEndColor(new java.awt.Color(153, 153, 255));
@@ -90,6 +91,11 @@ public class HomePage extends javax.swing.JFrame {
         jPanel02.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel02.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel02.setPreferredSize(new java.awt.Dimension(144, 196));
+        jPanel02.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                actionGuessNumber(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -115,6 +121,11 @@ public class HomePage extends javax.swing.JFrame {
         jPanel03.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel03.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel03.setPreferredSize(new java.awt.Dimension(144, 196));
+        jPanel03.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                actionWeightConverter(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -140,6 +151,11 @@ public class HomePage extends javax.swing.JFrame {
         jPanel04.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel04.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel04.setPreferredSize(new java.awt.Dimension(144, 196));
+        jPanel04.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                actionMultipleChoice(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -201,6 +217,18 @@ public class HomePage extends javax.swing.JFrame {
         new primeNumberChecker().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_actionPrimeNumber
+
+    private void actionGuessNumber(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actionGuessNumber
+        // TODO add your handling code here:
+    }//GEN-LAST:event_actionGuessNumber
+
+    private void actionWeightConverter(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actionWeightConverter
+        // TODO add your handling code here:
+    }//GEN-LAST:event_actionWeightConverter
+
+    private void actionMultipleChoice(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actionMultipleChoice
+        // TODO add your handling code here:
+    }//GEN-LAST:event_actionMultipleChoice
 
     /**
      * @param args the command line arguments

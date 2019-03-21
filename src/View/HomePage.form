@@ -11,6 +11,7 @@
       <Dimension value="[846, 602]"/>
     </Property>
     <Property name="name" type="java.lang.String" value="IT OPENHOUSE 2019" noResource="true"/>
+    <Property name="resizable" type="boolean" value="false"/>
     <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[846, 602]"/>
     </Property>
@@ -168,6 +169,9 @@
               <Dimension value="[144, 196]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="actionGuessNumber"/>
+          </Events>
 
           <Layout>
             <DimensionLayout dim="0">
@@ -214,6 +218,9 @@
               <Dimension value="[144, 196]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="actionWeightConverter"/>
+          </Events>
 
           <Layout>
             <DimensionLayout dim="0">
@@ -260,6 +267,9 @@
               <Dimension value="[144, 196]"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="actionMultipleChoice"/>
+          </Events>
 
           <Layout>
             <DimensionLayout dim="0">
