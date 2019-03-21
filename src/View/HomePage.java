@@ -199,7 +199,7 @@ public class HomePage extends javax.swing.JFrame {
 
     private void actionPrimeNumber(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actionPrimeNumber
         new primeNumberChecker().setVisible(true);
-        this.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_actionPrimeNumber
 
     /**
