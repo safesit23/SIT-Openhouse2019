@@ -19,8 +19,8 @@ public class primeNumberChecker extends javax.swing.JFrame {
      */
     public primeNumberChecker() {
         initComponents();
-        field.setBackground(new Color(0,0,0,20));
-        
+        field.setBackground(new Color(0, 0, 0, 20));
+
     }
 
     /**
@@ -49,6 +49,8 @@ public class primeNumberChecker extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         field = new javax.swing.JPanel();
+        output1 = new javax.swing.JLabel();
+        output2 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -153,11 +155,14 @@ public class primeNumberChecker extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(102, 204, 255));
         jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jpanel4exitedCheckButton(evt);
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel3MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jpanel4enterCheckButton(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jpanel4exitedCheckButton(evt);
             }
         });
 
@@ -184,11 +189,14 @@ public class primeNumberChecker extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(102, 204, 255));
         jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jpanel4exitedResetButton(evt);
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel4MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jpanel4enterResetButton(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jpanel4exitedResetButton(evt);
             }
         });
 
@@ -207,7 +215,7 @@ public class primeNumberChecker extends javax.swing.JFrame {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(9, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addContainerGap())
         );
@@ -245,15 +253,31 @@ public class primeNumberChecker extends javax.swing.JFrame {
 
         field.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        output1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+
+        output2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
         javax.swing.GroupLayout fieldLayout = new javax.swing.GroupLayout(field);
         field.setLayout(fieldLayout);
         fieldLayout.setHorizontalGroup(
             fieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 303, Short.MAX_VALUE)
+            .addGroup(fieldLayout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addComponent(output1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE))
+            .addGroup(fieldLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(output2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         fieldLayout.setVerticalGroup(
             fieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 421, Short.MAX_VALUE)
+            .addGroup(fieldLayout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(output1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
+                .addComponent(output2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54))
         );
 
         javax.swing.GroupLayout kGradientPanel2Layout = new javax.swing.GroupLayout(kGradientPanel2);
@@ -292,8 +316,8 @@ public class primeNumberChecker extends javax.swing.JFrame {
                                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addContainerGap(67, Short.MAX_VALUE))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel2Layout.createSequentialGroup()
+                                        .addContainerGap(108, Short.MAX_VALUE))))
+                            .addGroup(kGradientPanel2Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel2)
                                 .addGap(113, 113, 113))))))
@@ -310,9 +334,9 @@ public class primeNumberChecker extends javax.swing.JFrame {
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                         .addComponent(jLabel2)
                         .addGap(95, 95, 95)
                         .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -323,9 +347,12 @@ public class primeNumberChecker extends javax.swing.JFrame {
                         .addGap(48, 48, 48)
                         .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42))
+                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(187, 187, 187))
+                    .addGroup(kGradientPanel2Layout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addComponent(field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -359,7 +386,7 @@ public class primeNumberChecker extends javax.swing.JFrame {
 
     private void jpanel4clearbuttonclick(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpanel4clearbuttonclick
         // TODO add your handling code here:
-        jTextField1.setText(" ");
+        jTextField1.setText("");
     }//GEN-LAST:event_jpanel4clearbuttonclick
 
     private void jpanel4enterClearButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpanel4enterClearButton
@@ -404,24 +431,53 @@ public class primeNumberChecker extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-       
-        
+
+
     }//GEN-LAST:event_jTextField1ActionPerformed
-    public void setHomeColor (JPanel panel){
-        panel.setBackground(new java.awt.Color(115,163,239));   
+
+    private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
+        // TODO add your handling code here:
+        String str1 = jTextField1.getText();
+        int num = Integer.parseInt(str1);
+        int flag = 0;
+        for (int i = 2; i < num; i++) {
+//                if (num % i ==0) {
+//                    flag = 1;
+//                    area.setText(area.getText() + "\n" + num + "Divided by "+ i);
+//                    
+//                }
+        }
+        if (flag == 0) {
+            output1.setText("\n" + num);
+            output2.setText("is a prime Number ...");
+        } else {
+            output1.setText("\n" + num);
+            output2.setText("is Not a prime Number ...");
+        }
+    }//GEN-LAST:event_jPanel3MouseClicked
+
+    private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
+        // TODO add your handling code here:
+        jTextField1.setText("");
+        output1.setText("");
+        output2.setText("");
+    }//GEN-LAST:event_jPanel4MouseClicked
+    public void setHomeColor(JPanel panel) {
+        panel.setBackground(new java.awt.Color(115, 163, 239));
     }
-    public void resetHomeColor (JPanel panel){
-        panel.setBackground(new java.awt.Color(102,204,255));     
+
+    public void resetHomeColor(JPanel panel) {
+        panel.setBackground(new java.awt.Color(102, 204, 255));
     }
-     public void setButtonColor (JPanel panel){
-        panel.setBackground(new java.awt.Color(115,163,239));   
+
+    public void setButtonColor(JPanel panel) {
+        panel.setBackground(new java.awt.Color(115, 163, 239));
     }
-    public void resetButtonColor (JPanel panel){
-        panel.setBackground(new java.awt.Color(102,204,255));     
+
+    public void resetButtonColor(JPanel panel) {
+        panel.setBackground(new java.awt.Color(102, 204, 255));
     }
-    
-    
-    
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -472,5 +528,7 @@ public class primeNumberChecker extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JTextField jTextField1;
     private keeptoo.KGradientPanel kGradientPanel2;
+    private javax.swing.JLabel output1;
+    private javax.swing.JLabel output2;
     // End of variables declaration//GEN-END:variables
 }
