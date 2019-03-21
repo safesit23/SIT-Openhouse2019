@@ -41,7 +41,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(840, 602));
@@ -54,15 +54,15 @@ public class GuessTheNumber extends javax.swing.JFrame {
         jPanel3.setSize(new java.awt.Dimension(462, 289));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
-        jLabel1.setText("โปรแกรมทำนายตัวเลข");
+        jLabel1.setText("GuessTheNumber");
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
-        jLabel2.setText("ใส่ตัวเลข");
+        jLabel2.setText("Input");
 
         jTextField1.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
         jTextField1.setPreferredSize(new java.awt.Dimension(148, 40));
 
-        jButton1.setText("ล้าง");
+        jButton1.setText("Clear");
         jButton1.setPreferredSize(new java.awt.Dimension(121, 40));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,7 +70,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("ตรวจสอบ");
+        jButton2.setText("Process");
         jButton2.setPreferredSize(new java.awt.Dimension(221, 45));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,7 +78,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("เริ่มใหม่");
+        jButton3.setText("Reset");
         jButton3.setPreferredSize(new java.awt.Dimension(221, 45));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,31 +128,34 @@ public class GuessTheNumber extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(51, 255, 102));
         jPanel1.setPreferredSize(new java.awt.Dimension(324, 441));
 
-        jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 220)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 140)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("?");
 
-        jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
-        jLabel5.setPreferredSize(new java.awt.Dimension(300, 72));
+        jLabel4.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setPreferredSize(new java.awt.Dimension(300, 72));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addContainerGap(18, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 318, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(153, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -177,22 +180,22 @@ public class GuessTheNumber extends javax.swing.JFrame {
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         String input = jTextField1.getText();
         int inputNum = Integer.parseInt(input);
+        String goalStr = String.valueOf(goal);
 
         if(inputNum>goal){
-            jLabel3.setText(input);
-            jLabel5.setText("มีค่าสูงเกินไป");
+            //jLabel3.setText(input);
+            jLabel4.setText(inputNum+" it's more than");
         }else if(inputNum<goal){
-            jLabel3.setText(input);
-            jLabel5.setText("มีค่าน้อยเกินไป");
+            //jLabel3.setText(input);
+            jLabel4.setText(inputNum+" it's less than");
         }else{
-            jLabel3.setText(input);
-            jLabel5.setText("เย้!!! มึงถูก");
+            jLabel3.setText(goalStr);
+            jLabel4.setText(inputNum+" it's equal");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -249,7 +252,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextField1;
