@@ -93,7 +93,6 @@ public class PrimeNumberChecker extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(846, 602));
         setMinimumSize(new java.awt.Dimension(846, 602));
-        setPreferredSize(new java.awt.Dimension(846, 602));
         setResizable(false);
 
         kGradientPanel2.setkEndColor(new java.awt.Color(153, 153, 255));
@@ -230,7 +229,7 @@ public class PrimeNumberChecker extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(jLabel5)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
