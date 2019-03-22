@@ -356,7 +356,6 @@ public class GuessTheNumber extends javax.swing.JFrame {
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this,"How to play Star-Calculate");
     }//GEN-LAST:event_jLabel5MouseClicked
 
     /**
