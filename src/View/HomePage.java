@@ -219,7 +219,9 @@ public class HomePage extends javax.swing.JFrame {
     }//GEN-LAST:event_actionPrimeNumber
 
     private void actionGuessNumber(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actionGuessNumber
-        // TODO add your handling code here:
+        new GuessTheNumber().setVisible(true);
+        this.setVisible(false);
+// TODO add your handling code here:
     }//GEN-LAST:event_actionGuessNumber
 
     private void actionWeightConverter(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actionWeightConverter
