@@ -137,6 +137,7 @@ public class StarCalculate extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("?");
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel2MouseClicked(evt);
@@ -368,7 +369,7 @@ public class StarCalculate extends javax.swing.JFrame {
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this,"How to play Star-Calculate");
+        JOptionPane.showMessageDialog(this,"How to play Star-Calculate \nType Star Name on field and type your weight in the world.\nAfter that click Calculate Button.");
     }//GEN-LAST:event_jLabel2MouseClicked
     public void setHomeColor(JPanel panel) {
         panel.setBackground(new java.awt.Color(115, 163, 239));
