@@ -86,7 +86,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
         kGradientPanel2.setkStartColor(new java.awt.Color(51, 102, 153));
         kGradientPanel2.setPreferredSize(new java.awt.Dimension(846, 602));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-home-50.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/icons8-home-50.png"))); // NOI18N
 
         jPanel3.setBackground(new Color(0,0,0,0)
         );
