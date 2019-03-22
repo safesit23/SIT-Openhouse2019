@@ -9,6 +9,9 @@ import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.util.Random;
 import javax.swing.JPanel;
+import javax.swing.text.AttributeSet;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.PlainDocument;
 
 /**
  *
@@ -21,10 +24,28 @@ public class GuessTheNumber extends javax.swing.JFrame {
      */
     private Random rd = new Random();
     private int goal = rd.nextInt(100) + 1;
+    
+    private static class JTextFieldCharLimit extends PlainDocument{
+        private int limit;
+        
+        public JTextFieldCharLimit(int limitation){
+            this.limit =limitation;
+        }
+        
+        public void insertString(int offset, String str, AttributeSet set) throws BadLocationException{
+            if(str == null){
+                return;
+            }else if((getLength() + str.length())<= limit){
+                str = str.toUpperCase();
+                super.insertString(offset, str, set);
+            }
+        }
+    }
 
     public GuessTheNumber() {
         initComponents();
         jPanel3.setBackground(new Color(0, 0, 0, 0));
+        jTextField1.setDocument(new JTextFieldCharLimit(3));
     }
 
     /**
@@ -362,6 +383,8 @@ public class GuessTheNumber extends javax.swing.JFrame {
             }
         });
     }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton3;
