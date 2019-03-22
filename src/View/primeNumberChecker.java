@@ -6,6 +6,7 @@
 package View;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -443,6 +444,7 @@ public class primeNumberChecker extends javax.swing.JFrame {
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
         // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this,"How to play Prime Number Checker");
     }//GEN-LAST:event_jLabel9MouseClicked
     public void setHomeColor(JPanel panel) {
         panel.setBackground(new java.awt.Color(115, 163, 239));
@@ -490,6 +492,7 @@ public class primeNumberChecker extends javax.swing.JFrame {
                 new primeNumberChecker().setVisible(true);
             }
         });
+            
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
