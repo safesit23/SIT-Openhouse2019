@@ -79,6 +79,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(840, 602));
         setMinimumSize(new java.awt.Dimension(846, 602));
+        setResizable(false);
 
         kGradientPanel2.setkEndColor(new java.awt.Color(255, 255, 255));
         kGradientPanel2.setkGradientFocus(0);
@@ -242,8 +243,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
         jLabel6.setText("OpenHouse 2019");
 
-        jPanel5.setBackground(new Color(0,0,0,50)
-        );
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel5.setPreferredSize(new java.awt.Dimension(324, 441));
 
@@ -312,6 +312,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
         getContentPane().add(kGradientPanel2, java.awt.BorderLayout.CENTER);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -328,15 +329,12 @@ public class GuessTheNumber extends javax.swing.JFrame {
         if (inputNum > goal) {
             //jLabel3.setText(input);
             jLabel4.setText(inputNum + " it's more than");
-            jLabel4.setBackground(new Color(0,0,0,0));
         } else if (inputNum < goal) {
             //jLabel3.setText(input);
             jLabel4.setText(inputNum + " it's less than");
-            jLabel4.setBackground(new Color(0,0,0,0));
         } else {
             jLabel3.setText(goalStr);
             jLabel4.setText(inputNum + " it's equal");
-            //jLabel4.setBackground(new Color(0,0,0,0));
         }
     }//GEN-LAST:event_Check
 
