@@ -261,6 +261,11 @@ public class primeNumberChecker extends javax.swing.JFrame {
         );
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/012-question.png"))); // NOI18N
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout kGradientPanel2Layout = new javax.swing.GroupLayout(kGradientPanel2);
         kGradientPanel2.setLayout(kGradientPanel2Layout);
@@ -435,6 +440,10 @@ public class primeNumberChecker extends javax.swing.JFrame {
         output2.setText("");
         
     }//GEN-LAST:event_jPanel4MouseClicked
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel9MouseClicked
     public void setHomeColor(JPanel panel) {
         panel.setBackground(new java.awt.Color(115, 163, 239));
     }
