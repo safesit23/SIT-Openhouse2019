@@ -8,6 +8,7 @@ package View;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.util.Random;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
@@ -173,7 +174,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 39, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel4Layout.createSequentialGroup()
                     .addContainerGap()
@@ -356,6 +357,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this,"How to play GuessTheNumber"+"\n\n"+"::จะใส่ไรก็เเล้วเเต่เลย::");
     }//GEN-LAST:event_jLabel5MouseClicked
 
     /**
