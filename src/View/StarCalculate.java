@@ -137,6 +137,11 @@ public class StarCalculate extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("?");
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 26)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -360,6 +365,11 @@ public class StarCalculate extends javax.swing.JFrame {
         this.setVisible(false);
         home.setVisible(true);
     }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this,"How to play Star-Calculate");
+    }//GEN-LAST:event_jLabel2MouseClicked
     public void setHomeColor(JPanel panel) {
         panel.setBackground(new java.awt.Color(115, 163, 239));
     }
