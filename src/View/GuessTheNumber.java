@@ -327,13 +327,13 @@ public class GuessTheNumber extends javax.swing.JFrame {
 
         if (inputNum > goal) {
             //jLabel3.setText(input);
-            jLabel4.setText(inputNum + " it's more than");
+            jLabel4.setText("It's less than "+inputNum);
         } else if (inputNum < goal) {
             //jLabel3.setText(input);
-            jLabel4.setText(inputNum + " it's less than");
+            jLabel4.setText("It's more than "+inputNum);
         } else {
             jLabel3.setText(goalStr);
-            jLabel4.setText(inputNum + " it's equal");
+            jLabel4.setText("It's equal");
         }
     }//GEN-LAST:event_Check
 
