@@ -214,7 +214,7 @@ public class HomePage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void actionPrimeNumber(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actionPrimeNumber
-        new primeNumberChecker().setVisible(true);
+        new PrimeNumberChecker().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_actionPrimeNumber
 
@@ -268,11 +268,9 @@ public class HomePage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JLayeredPane jPanel01;
     private javax.swing.JLayeredPane jPanel02;
     private javax.swing.JLayeredPane jPanel03;

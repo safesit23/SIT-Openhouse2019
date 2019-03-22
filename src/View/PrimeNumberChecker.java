@@ -13,12 +13,12 @@ import javax.swing.JPanel;
  *
  * @author Books
  */
-public class primeNumberChecker extends javax.swing.JFrame {
+public class PrimeNumberChecker extends javax.swing.JFrame {
 
     /**
      * Creates new form primeNumberChecker
      */
-    public primeNumberChecker() {
+    public PrimeNumberChecker() {
         initComponents();
         //field.setBackground(new Color(0, 0, 64,64));
         field.setOpaque(false);
@@ -69,6 +69,8 @@ public class primeNumberChecker extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(846, 602));
+        setResizable(false);
 
         kGradientPanel2.setkEndColor(new java.awt.Color(153, 153, 255));
         kGradientPanel2.setkGradientFocus(0);
@@ -351,6 +353,7 @@ public class primeNumberChecker extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jpanel4mouseenter(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpanel4mouseenter
@@ -365,7 +368,8 @@ public class primeNumberChecker extends javax.swing.JFrame {
 
     private void jpanel4mouseclick(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpanel4mouseclick
         // TODO add your handling code here:
-        System.exit(0);
+        new HomePage().setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jpanel4mouseclick
 
     private void jpanel4clearbuttonclick(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpanel4clearbuttonclick
@@ -474,20 +478,21 @@ public class primeNumberChecker extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(primeNumberChecker.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrimeNumberChecker.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(primeNumberChecker.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrimeNumberChecker.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(primeNumberChecker.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrimeNumberChecker.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(primeNumberChecker.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PrimeNumberChecker.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new primeNumberChecker().setVisible(true);
+                new PrimeNumberChecker().setVisible(true);
             }
         });
             
