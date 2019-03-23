@@ -5,12 +5,13 @@
  */
 package View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author jatawatsafe
  */
 public class DidYouKnow extends javax.swing.JFrame {
-
     /**
      * Creates new form TemplateJFrame
      */
@@ -28,7 +29,8 @@ public class DidYouKnow extends javax.swing.JFrame {
     private void initComponents() {
 
         kGradientPanel1 = new keeptoo.KGradientPanel();
-        jLabel1 = new javax.swing.JLabel();
+        home = new javax.swing.JLabel();
+        help = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("IT OPENHOUSE 2019");
@@ -44,22 +46,47 @@ public class DidYouKnow extends javax.swing.JFrame {
         kGradientPanel1.setMinimumSize(new java.awt.Dimension(846, 602));
         kGradientPanel1.setPreferredSize(new java.awt.Dimension(846, 602));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 72)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Openhouse IT 2019");
+        home.setFont(new java.awt.Font("Arial", 1, 30)); // NOI18N
+        home.setForeground(new java.awt.Color(255, 255, 255));
+        home.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/Group.png"))); // NOI18N
+        home.setText("OpenHouse 2019");
+        home.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        home.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                homeMouseClicked(evt);
+            }
+        });
+
+        help.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        help.setForeground(new java.awt.Color(255, 255, 255));
+        help.setText("?");
+        help.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        help.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                helpMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
         kGradientPanel1.setLayout(kGradientPanel1Layout);
         kGradientPanel1Layout.setHorizontalGroup(
             kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(home, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(513, 513, 513)
+                .addComponent(help)
+                .addGap(14, 14, 14))
         );
         kGradientPanel1Layout.setVerticalGroup(
             kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(kGradientPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 443, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(help)
+                    .addComponent(home, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(546, Short.MAX_VALUE))
         );
 
         getContentPane().add(kGradientPanel1, java.awt.BorderLayout.PAGE_START);
@@ -67,6 +94,16 @@ public class DidYouKnow extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseClicked
+        new HomePage().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_homeMouseClicked
+
+    private void helpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMouseClicked
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this,"Help");
+    }//GEN-LAST:event_helpMouseClicked
 
     /**
      * @param args the command line arguments
@@ -105,7 +142,8 @@ public class DidYouKnow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel help;
+    private javax.swing.JLabel home;
     private keeptoo.KGradientPanel kGradientPanel1;
     // End of variables declaration//GEN-END:variables
 }
