@@ -10,7 +10,6 @@ package View;
  * @author jatawatsafe
  */
 public class HomePage extends javax.swing.JFrame {
-
     /**
      * Creates new form TemplateJFrame
      */
@@ -206,14 +205,18 @@ public class HomePage extends javax.swing.JFrame {
     private void actionGuessNumber(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actionGuessNumber
         new GuessTheNumber().setVisible(true);
         this.setVisible(false);
-// TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_actionGuessNumber
 
     private void actionWeightConverter(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actionWeightConverter
+        new StarCalculate().setVisible(true);
+        this.setVisible(false);
         // TODO add your handling code here:
     }//GEN-LAST:event_actionWeightConverter
 
     private void actionMultipleChoice(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actionMultipleChoice
+        new DidYouKnow().setVisible(true);
+        this.setVisible(false);
         // TODO add your handling code here:
     }//GEN-LAST:event_actionMultipleChoice
 
