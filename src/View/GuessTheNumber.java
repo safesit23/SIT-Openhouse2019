@@ -168,9 +168,9 @@ public class GuessTheNumber extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(82, 82, 82)
+                .addGap(76, 76, 76)
                 .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(94, 94, 94))
+                .addGap(100, 100, 100))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -356,7 +356,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
 
     private void helpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMouseClicked
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this,"How to play GuessTheNumber"+"\n\n"+"::จะใส่ไรก็เเล้วเเต่เลย::");
+        JOptionPane.showMessageDialog(this,"How to play GuessTheNumber"+"\n\n"+"Input your number(1-100)"+"");
     }//GEN-LAST:event_helpMouseClicked
 
     /**
