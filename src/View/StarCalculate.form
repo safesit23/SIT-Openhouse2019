@@ -139,10 +139,7 @@
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="jTextField1" min="-2" pref="131" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabel6" min="-2" pref="97" max="-2" attributes="0"/>
-                                          <EmptySpace min="149" pref="149" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="jLabel6" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                   <Component id="jButton2" min="-2" max="-2" attributes="0"/>

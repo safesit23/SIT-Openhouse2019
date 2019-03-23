@@ -423,7 +423,7 @@ public class StarCalculate extends javax.swing.JFrame {
 
     private void helpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMouseClicked
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this,"How to play Star-Calculate \nType Star Name on field and type your weight in the world.\nAfter that click Calculate Button.");
+        JOptionPane.showMessageDialog(this,"How to play Star-Calculate \nSelect Star Name on button and type your weight in the world.\nAfter that click Calculate Button.");
     }//GEN-LAST:event_helpMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
