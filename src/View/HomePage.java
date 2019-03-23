@@ -31,12 +31,16 @@ public class HomePage extends javax.swing.JFrame {
         topic = new javax.swing.JLabel();
         jPanel01 = new javax.swing.JLayeredPane();
         jLabel1 = new javax.swing.JLabel();
+        game1 = new javax.swing.JLabel();
         jPanel02 = new javax.swing.JLayeredPane();
         jLabel4 = new javax.swing.JLabel();
+        game2 = new javax.swing.JLabel();
         jPanel03 = new javax.swing.JLayeredPane();
         jLabel6 = new javax.swing.JLabel();
+        game3 = new javax.swing.JLabel();
         jPanel04 = new javax.swing.JLayeredPane();
         jLabel5 = new javax.swing.JLabel();
+        game4 = new javax.swing.JLabel();
         logo = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -60,7 +64,7 @@ public class HomePage extends javax.swing.JFrame {
         topic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         topic.setText("Openhouse IT 2019");
 
-        jPanel01.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel01.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel01.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel01.setPreferredSize(new java.awt.Dimension(144, 196));
         jPanel01.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -68,29 +72,19 @@ public class HomePage extends javax.swing.JFrame {
                 actionPrimeNumber(evt);
             }
         });
+        jPanel01.setLayout(new java.awt.BorderLayout());
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("PrimeNumber");
+        jLabel1.setText("Mini Game 1");
+        jPanel01.add(jLabel1, java.awt.BorderLayout.CENTER);
 
-        jPanel01.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        game1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/game1.png"))); // NOI18N
+        game1.setText(" ");
+        jPanel01.add(game1, java.awt.BorderLayout.PAGE_START);
 
-        javax.swing.GroupLayout jPanel01Layout = new javax.swing.GroupLayout(jPanel01);
-        jPanel01.setLayout(jPanel01Layout);
-        jPanel01Layout.setHorizontalGroup(
-            jPanel01Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
-        );
-        jPanel01Layout.setVerticalGroup(
-            jPanel01Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel01Layout.createSequentialGroup()
-                .addContainerGap(148, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        jPanel02.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel02.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel02.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel02.setPreferredSize(new java.awt.Dimension(144, 196));
         jPanel02.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -98,29 +92,19 @@ public class HomePage extends javax.swing.JFrame {
                 actionGuessNumber(evt);
             }
         });
+        jPanel02.setLayout(new java.awt.BorderLayout());
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("GuessNumber");
+        jLabel4.setText("Mini Game 2");
+        jPanel02.add(jLabel4, java.awt.BorderLayout.CENTER);
 
-        jPanel02.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        game2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/game2.png"))); // NOI18N
+        game2.setText(" ");
+        jPanel02.add(game2, java.awt.BorderLayout.PAGE_START);
 
-        javax.swing.GroupLayout jPanel02Layout = new javax.swing.GroupLayout(jPanel02);
-        jPanel02.setLayout(jPanel02Layout);
-        jPanel02Layout.setHorizontalGroup(
-            jPanel02Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
-        );
-        jPanel02Layout.setVerticalGroup(
-            jPanel02Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel02Layout.createSequentialGroup()
-                .addContainerGap(148, Short.MAX_VALUE)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        jPanel03.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel03.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel03.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel03.setPreferredSize(new java.awt.Dimension(144, 196));
         jPanel03.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -128,29 +112,19 @@ public class HomePage extends javax.swing.JFrame {
                 actionWeightConverter(evt);
             }
         });
+        jPanel03.setLayout(new java.awt.BorderLayout());
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Mini Game 3");
+        jPanel03.add(jLabel6, java.awt.BorderLayout.CENTER);
 
-        jPanel03.setLayer(jLabel6, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        game3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/game3.png"))); // NOI18N
+        game3.setText(" ");
+        jPanel03.add(game3, java.awt.BorderLayout.PAGE_START);
 
-        javax.swing.GroupLayout jPanel03Layout = new javax.swing.GroupLayout(jPanel03);
-        jPanel03.setLayout(jPanel03Layout);
-        jPanel03Layout.setHorizontalGroup(
-            jPanel03Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
-        );
-        jPanel03Layout.setVerticalGroup(
-            jPanel03Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel03Layout.createSequentialGroup()
-                .addContainerGap(148, Short.MAX_VALUE)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        jPanel04.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel04.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel04.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel04.setPreferredSize(new java.awt.Dimension(144, 196));
         jPanel04.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -158,27 +132,17 @@ public class HomePage extends javax.swing.JFrame {
                 actionMultipleChoice(evt);
             }
         });
+        jPanel04.setLayout(new java.awt.BorderLayout());
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Mini Game 4");
+        jPanel04.add(jLabel5, java.awt.BorderLayout.CENTER);
 
-        jPanel04.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        javax.swing.GroupLayout jPanel04Layout = new javax.swing.GroupLayout(jPanel04);
-        jPanel04.setLayout(jPanel04Layout);
-        jPanel04Layout.setHorizontalGroup(
-            jPanel04Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
-        );
-        jPanel04Layout.setVerticalGroup(
-            jPanel04Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel04Layout.createSequentialGroup()
-                .addContainerGap(148, Short.MAX_VALUE)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        game4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/game4.png"))); // NOI18N
+        game4.setText("   ");
+        jPanel04.add(game4, java.awt.BorderLayout.PAGE_START);
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/logoSIT.png"))); // NOI18N
 
@@ -290,6 +254,10 @@ public class HomePage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel game1;
+    private javax.swing.JLabel game2;
+    private javax.swing.JLabel game3;
+    private javax.swing.JLabel game4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
