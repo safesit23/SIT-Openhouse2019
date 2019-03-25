@@ -371,7 +371,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
 
     private void helpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMouseClicked
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this, "How to play GuessTheNumber" + "\n\n" + "::Input your number(1-100)::" + "\n" + "::and check it's Prime number or not::");
+        JOptionPane.showMessageDialog(this, "How to play GuessTheNumber" + "\n\n" + "::Input your number(1-100)::" + "\n" + "::System'll random the number::" + "\n" + "::After that put your number until matching::");
     }//GEN-LAST:event_helpMouseClicked
 
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
