@@ -25,18 +25,19 @@ public class GuessTheNumber extends javax.swing.JFrame {
      */
     private Random rd = new Random();
     private int goal = rd.nextInt(100) + 1;
-    
-    private static class JTextFieldCharLimit extends PlainDocument{
+
+    private static class JTextFieldCharLimit extends PlainDocument {
+
         private int limit;
-        
-        public JTextFieldCharLimit(int limitation){
-            this.limit =limitation;
+
+        public JTextFieldCharLimit(int limitation) {
+            this.limit = limitation;
         }
-        
-        public void insertString(int offset, String str, AttributeSet set) throws BadLocationException{
-            if(str == null){
+
+        public void insertString(int offset, String str, AttributeSet set) throws BadLocationException {
+            if (str == null) {
                 return;
-            }else if((getLength() + str.length())<= limit){
+            } else if ((getLength() + str.length()) <= limit) {
                 str = str.toUpperCase();
                 super.insertString(offset, str, set);
             }
@@ -340,10 +341,11 @@ public class GuessTheNumber extends javax.swing.JFrame {
 
         if (inputNum > goal) {
             //jLabel3.setText(input);
-            jLabel4.setText("It's less than "+inputNum);
+            jLabel4.setText("It's less than " + inputNum);
         } else if (inputNum < goal) {
             //jLabel3.setText(input);
-            jLabel4.setText("It's more than "+inputNum);
+            jLabel4.setText("It's more than " + inputNum);
+
         } else {
             jLabel3.setText(goalStr);
             jLabel4.setText("It's equal");
@@ -369,7 +371,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
 
     private void helpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMouseClicked
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this,"How to play GuessTheNumber"+"\n\n"+"Input your number(1-100)"+"");
+        JOptionPane.showMessageDialog(this, "How to play GuessTheNumber" + "\n\n" + "::Input your number(1-100)::" + "\n" + "::and check it's Prime number or not::");
     }//GEN-LAST:event_helpMouseClicked
 
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
@@ -413,8 +415,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
             }
         });
     }
-    
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel help;
