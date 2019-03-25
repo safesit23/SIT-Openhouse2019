@@ -163,6 +163,11 @@ public class GuessTheNumber extends javax.swing.JFrame {
         jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel4.setPreferredSize(new java.awt.Dimension(221, 45));
+        jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel4MouseClicked(evt);
+            }
+        });
 
         jLabel9.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -366,6 +371,12 @@ public class GuessTheNumber extends javax.swing.JFrame {
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(this,"How to play GuessTheNumber"+"\n\n"+"Input your number(1-100)"+"");
     }//GEN-LAST:event_helpMouseClicked
+
+    private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
+        GuessTheNumber guess = new GuessTheNumber();
+        this.setVisible(false);
+        guess.setVisible(true);
+    }//GEN-LAST:event_jPanel4MouseClicked
 
     /**
      * @param args the command line arguments
