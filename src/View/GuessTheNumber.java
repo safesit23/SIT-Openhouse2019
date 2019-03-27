@@ -8,6 +8,7 @@ package View;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.util.Random;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.text.AttributeSet;
@@ -113,6 +114,14 @@ public class GuessTheNumber extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setPreferredSize(new java.awt.Dimension(121, 40));
+        jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                hoverJPanel1Exited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                hoverJPanel1Entered(evt);
+            }
+        });
 
         jLabel7.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -121,6 +130,12 @@ public class GuessTheNumber extends javax.swing.JFrame {
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Clear(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                hoverJLabel7Exited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                hoverJLabel7Entered(evt);
             }
         });
 
@@ -138,6 +153,14 @@ public class GuessTheNumber extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel2.setPreferredSize(new java.awt.Dimension(221, 45));
+        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                HoverjPanel2Exited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                HoverjPanel2(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -146,6 +169,12 @@ public class GuessTheNumber extends javax.swing.JFrame {
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Check(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                hoverjLabel8Exited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                hoverjLabel8Entered(evt);
             }
         });
 
@@ -168,11 +197,25 @@ public class GuessTheNumber extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPanel4MouseClicked(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                hoverJPanel4Exited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                hoverJPanel4Entered(evt);
+            }
         });
 
         jLabel9.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Reset");
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                hoverJLabel9Exited(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                hoverJLabel9Entered(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -180,8 +223,8 @@ public class GuessTheNumber extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(69, 69, 69)
-                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(107, 107, 107))
+                .addComponent(jLabel9)
+                .addContainerGap(68, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -377,6 +420,64 @@ public class GuessTheNumber extends javax.swing.JFrame {
         guess.setVisible(true);
     }//GEN-LAST:event_jPanel4MouseClicked
 
+    private void HoverjPanel2(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HoverjPanel2
+        setButtonColor(jPanel2);
+    }//GEN-LAST:event_HoverjPanel2
+
+    private void HoverjPanel2Exited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HoverjPanel2Exited
+        resetButtonColor(jPanel2);
+    }//GEN-LAST:event_HoverjPanel2Exited
+
+    private void hoverjLabel8Entered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hoverjLabel8Entered
+        setButtonColor(jPanel2);
+    }//GEN-LAST:event_hoverjLabel8Entered
+
+    private void hoverjLabel8Exited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hoverjLabel8Exited
+        resetButtonColor(jPanel2);
+    }//GEN-LAST:event_hoverjLabel8Exited
+
+    private void hoverJPanel4Entered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hoverJPanel4Entered
+        setButtonColor(jPanel4);
+    }//GEN-LAST:event_hoverJPanel4Entered
+
+    private void hoverJPanel4Exited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hoverJPanel4Exited
+        resetButtonColor(jPanel4);
+    }//GEN-LAST:event_hoverJPanel4Exited
+
+    private void hoverJLabel9Entered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hoverJLabel9Entered
+        setButtonColor(jPanel4);
+    }//GEN-LAST:event_hoverJLabel9Entered
+
+    private void hoverJLabel9Exited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hoverJLabel9Exited
+        resetButtonColor(jPanel4);
+    }//GEN-LAST:event_hoverJLabel9Exited
+
+    private void hoverJPanel1Entered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hoverJPanel1Entered
+        setButtonColor(jPanel1);
+    }//GEN-LAST:event_hoverJPanel1Entered
+
+    private void hoverJPanel1Exited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hoverJPanel1Exited
+        resetButtonColor(jPanel1);
+    }//GEN-LAST:event_hoverJPanel1Exited
+
+    private void hoverJLabel7Entered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hoverJLabel7Entered
+        setButtonColor(jPanel1);
+    }//GEN-LAST:event_hoverJLabel7Entered
+
+    private void hoverJLabel7Exited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hoverJLabel7Exited
+        resetButtonColor(jPanel1);
+    }//GEN-LAST:event_hoverJLabel7Exited
+
+    
+    public void setButtonColor(JPanel panel) {
+        panel.setBackground(new java.awt.Color(224, 224, 224));
+    }
+
+    public void resetButtonColor(JPanel panel) {
+        panel.setBackground(new java.awt.Color(255, 255, 255));
+    }
+    
+    
     /**
      * @param args the command line arguments
      */
