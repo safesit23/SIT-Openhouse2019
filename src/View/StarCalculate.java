@@ -166,6 +166,12 @@ public class StarCalculate extends javax.swing.JFrame {
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText("Star : ");
 
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField1KeyTyped(evt);
+            }
+        });
+
         jButton2.setText("Clear");
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -263,8 +269,7 @@ public class StarCalculate extends javax.swing.JFrame {
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(kGradientPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(homepage)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(homepage)))
                 .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(kGradientPanel2Layout.createSequentialGroup()
                         .addGap(83, 83, 83)
@@ -393,21 +398,21 @@ public class StarCalculate extends javax.swing.JFrame {
 
         switch (jLabel11.getText().toLowerCase()) {
             case "mercury":
-            gc = 0.4;
-            starName = "Mercury";
-            break;
+                gc = 0.4;
+                starName = "Mercury";
+                break;
             case "saturn":
-            gc = 1.1;
-            starName = "Saturn";
-            break;
+                gc = 1.1;
+                starName = "Saturn";
+                break;
             case "venus":
-            gc = 0.9;
-            starName = "Venus";
-            break;
+                gc = 0.9;
+                starName = "Venus";
+                break;
             case "jupiter":
-            gc = 2.5;
-            starName = "Jupiter";
-            break;
+                gc = 2.5;
+                starName = "Jupiter";
+                break;
         }
 
         double starWeight = gc * Double.parseDouble(jTextField1.getText());
@@ -429,7 +434,7 @@ public class StarCalculate extends javax.swing.JFrame {
 
     private void helpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMouseClicked
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this,"How to play Star-Calculate \nSelect Star Name on button and type your weight in the world.\nAfter that click Calculate Button.");
+        JOptionPane.showMessageDialog(this, "How to play Star-Calculate \nSelect Star Name on button and type your weight in the world.\nAfter that click Calculate Button.");
     }//GEN-LAST:event_helpMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -439,6 +444,13 @@ public class StarCalculate extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         jLabel11.setText("Mercury");
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
+        char c = evt.getKeyChar();
+        if (!(Character.isDigit(c) || (c == KeyEvent.VK_BACK_SPACE) || c == KeyEvent.VK_DELETE)) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTextField1KeyTyped
     public void setHomeColor(JPanel panel) {
         panel.setBackground(new java.awt.Color(115, 163, 239));
     }
