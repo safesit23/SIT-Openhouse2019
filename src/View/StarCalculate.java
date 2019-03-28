@@ -394,8 +394,6 @@ public class StarCalculate extends javax.swing.JFrame {
 
         NumberFormat formatter = new DecimalFormat("#0.0");
         
-        System.out.println(jLabel11.getText());
-
         if (!jTextField1.getText().isEmpty() && !jLabel11.getText().equalsIgnoreCase("")) {
             double gc = 0;
             String starName = "";
