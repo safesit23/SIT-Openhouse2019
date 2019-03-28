@@ -29,7 +29,7 @@ public class PrimeNumberChecker extends javax.swing.JFrame {
         jTextField1.setDocument(new JTextFieldCharLimit(4));
         jPanel5.setOpaque(false);
         jPanel1.setOpaque(false);
-        
+
     }
 
     private static class JTextFieldCharLimit extends PlainDocument {
@@ -481,24 +481,26 @@ public class PrimeNumberChecker extends javax.swing.JFrame {
 
     private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
         // TODO add your handling code here:
-        String str1 = jTextField1.getText();
-        int num = Integer.parseInt(str1);
-        int flag = 0;
-        for (int i = 2; i < num; i++) {
-            if (num % i == 0) {
-                flag = 1;
+        if (!jTextField1.getText().isEmpty()) {
+            String str1 = jTextField1.getText();
+            int num = Integer.parseInt(str1);
+            int flag = 0;
+            for (int i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    flag = 1;
 //                    area.setText(area.getText() + "\n" + num + "Divided by "+ i);
 //                    
+                }
             }
-        }
-        if (flag == 0) {
-            output1.setText("\n" + num);
-            output2.setText("is a prime Number ");
+            if (flag == 0) {
+                output1.setText("\n" + num);
+                output2.setText("is a prime Number ");
 
-        } else {
-            output1.setText("\n" + num);
-            output2.setText("is Not a prime Number ");
+            } else {
+                output1.setText("\n" + num);
+                output2.setText("is Not a prime Number ");
 
+            }
         }
     }//GEN-LAST:event_jPanel3MouseClicked
 
@@ -512,7 +514,7 @@ public class PrimeNumberChecker extends javax.swing.JFrame {
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this, "How to play Prime Number Checker ??"+"\n\n"+"::Input Your number and::"+"\n"+"::Check is prime number or not::");
+        JOptionPane.showMessageDialog(this, "How to play Prime Number Checker ??" + "\n\n" + "::Input Your number and::" + "\n" + "::Check is prime number or not::");
     }//GEN-LAST:event_jLabel9MouseClicked
 
     private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped

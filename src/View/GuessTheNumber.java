@@ -375,20 +375,23 @@ public class GuessTheNumber extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Check(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Check
-        String input = jTextField1.getText();
-        int inputNum = Integer.parseInt(input);
-        String goalStr = String.valueOf(goal);
 
-        if (inputNum > goal) {
-            //jLabel3.setText(input);
-            jLabel4.setText("It's less than " + inputNum);
-        } else if (inputNum < goal) {
-            //jLabel3.setText(input);
-            jLabel4.setText("It's more than " + inputNum);
+        if (!jTextField1.getText().isEmpty()) {
+            String input = jTextField1.getText();
+            int inputNum = Integer.parseInt(input);
+            String goalStr = String.valueOf(goal);
 
-        } else {
-            jLabel3.setText(goalStr);
-            jLabel4.setText("It's equal");
+            if (inputNum > goal) {
+                //jLabel3.setText(input);
+                jLabel4.setText("It's less than " + inputNum);
+            } else if (inputNum < goal) {
+                //jLabel3.setText(input);
+                jLabel4.setText("It's more than " + inputNum);
+
+            } else {
+                jLabel3.setText(goalStr);
+                jLabel4.setText("It's equal");
+            }
         }
     }//GEN-LAST:event_Check
 
@@ -468,7 +471,6 @@ public class GuessTheNumber extends javax.swing.JFrame {
         resetButtonColor(jPanel1);
     }//GEN-LAST:event_hoverJLabel7Exited
 
-    
     public void setButtonColor(JPanel panel) {
         panel.setBackground(new java.awt.Color(224, 224, 224));
     }
@@ -476,8 +478,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
     public void resetButtonColor(JPanel panel) {
         panel.setBackground(new java.awt.Color(255, 255, 255));
     }
-    
-    
+
     /**
      * @param args the command line arguments
      */
