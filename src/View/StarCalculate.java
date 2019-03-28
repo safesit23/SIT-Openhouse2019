@@ -393,32 +393,36 @@ public class StarCalculate extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
         NumberFormat formatter = new DecimalFormat("#0.0");
+        
+        System.out.println(jLabel11.getText());
 
-        double gc = 0;
-        String starName = "";
+        if (!jTextField1.getText().isEmpty() && !jLabel11.getText().equalsIgnoreCase("")) {
+            double gc = 0;
+            String starName = "";
 
-        switch (jLabel11.getText().toLowerCase()) {
-            case "mercury":
-                gc = 0.4;
-                starName = "on Mercury";
-                break;
-            case "saturn":
-                gc = 1.1;
-                starName = "on Saturn";
-                break;
-            case "venus":
-                gc = 0.9;
-                starName = "on Venus";
-                break;
-            case "jupiter":
-                gc = 2.5;
-                starName = "on Jupiter";
-                break;
+            switch (jLabel11.getText().toLowerCase()) {
+                case "mercury":
+                    gc = 0.4;
+                    starName = "on Mercury";
+                    break;
+                case "saturn":
+                    gc = 1.1;
+                    starName = "on Saturn";
+                    break;
+                case "venus":
+                    gc = 0.9;
+                    starName = "on Venus";
+                    break;
+                case "jupiter":
+                    gc = 2.5;
+                    starName = "on Jupiter";
+                    break;
+            }
+
+            double starWeight = gc * Double.parseDouble(jTextField1.getText());
+            output1.setText(formatter.format(starWeight) + " kg.");
+            output2.setText(starName);
         }
-
-        double starWeight = gc * Double.parseDouble(jTextField1.getText());
-        output1.setText(formatter.format(starWeight) + " kg.");
-        output2.setText(starName);
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
