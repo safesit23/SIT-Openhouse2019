@@ -5,6 +5,10 @@
  */
 package View;
 
+import java.awt.Color;
+import javax.swing.JLayeredPane;
+import javax.swing.JPanel;
+
 /**
  *
  * @author jatawatsafe
@@ -70,6 +74,12 @@ public class HomePage extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 actionPrimeNumber(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                exited01(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                entered01(evt);
+            }
         });
         jPanel01.setLayout(new java.awt.BorderLayout());
 
@@ -89,6 +99,12 @@ public class HomePage extends javax.swing.JFrame {
         jPanel02.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 actionGuessNumber(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                exited02(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                entered02(evt);
             }
         });
         jPanel02.setLayout(new java.awt.BorderLayout());
@@ -110,6 +126,12 @@ public class HomePage extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 actionWeightConverter(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                removed03(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                entered03(evt);
+            }
         });
         jPanel03.setLayout(new java.awt.BorderLayout());
 
@@ -129,6 +151,12 @@ public class HomePage extends javax.swing.JFrame {
         jPanel04.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 actionMultipleChoice(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                exited04(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                entered04(evt);
             }
         });
         jPanel04.setLayout(new java.awt.BorderLayout());
@@ -220,6 +248,38 @@ public class HomePage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_actionMultipleChoice
 
+    private void entered01(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entered01
+        setButtonColor(jPanel01);
+    }//GEN-LAST:event_entered01
+
+    private void exited01(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exited01
+        resetButtonColor(jPanel01);
+    }//GEN-LAST:event_exited01
+
+    private void entered02(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entered02
+        setButtonColor(jPanel02);
+    }//GEN-LAST:event_entered02
+
+    private void exited02(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exited02
+        resetButtonColor(jPanel02);
+    }//GEN-LAST:event_exited02
+
+    private void entered03(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entered03
+        setButtonColor(jPanel03);
+    }//GEN-LAST:event_entered03
+
+    private void removed03(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_removed03
+        resetButtonColor(jPanel03);
+    }//GEN-LAST:event_removed03
+
+    private void entered04(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entered04
+        setButtonColor(jPanel04);
+    }//GEN-LAST:event_entered04
+
+    private void exited04(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exited04
+        resetButtonColor(jPanel04);
+    }//GEN-LAST:event_exited04
+
     /**
      * @param args the command line arguments
      */
@@ -254,6 +314,14 @@ public class HomePage extends javax.swing.JFrame {
                 new HomePage().setVisible(true);
             }
         });
+    }
+    
+    public void setButtonColor(JLayeredPane panel) {
+        panel.setBackground(Color.ORANGE);
+    }
+
+    public void resetButtonColor(JLayeredPane panel) {
+        panel.setBackground(Color.WHITE);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
