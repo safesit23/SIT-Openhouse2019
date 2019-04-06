@@ -6,17 +6,28 @@
 package View;
 
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
  * @author jatawatsafe
  */
 public class DidYouKnow03 extends javax.swing.JFrame {
+    private String playName;
+    private int score;
+    
     /**
      * Creates new form TemplateJFrame
      */
     public DidYouKnow03() {
         initComponents();
+    }
+    
+    public DidYouKnow03(String playName, int score) {
+        this.playName = playName;
+        this.score = score;
+        initComponents();
+        this.name.setText(playName);
     }
 
     /**
@@ -30,8 +41,12 @@ public class DidYouKnow03 extends javax.swing.JFrame {
 
         kGradientPanel1 = new keeptoo.KGradientPanel();
         home = new javax.swing.JLabel();
-        help = new javax.swing.JLabel();
         sitlogo = new javax.swing.JLabel();
+        buttonPlayAgain = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        name = new javax.swing.JLabel();
+        point = new javax.swing.JLabel();
+        game4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("IT OPENHOUSE 2019");
@@ -59,17 +74,57 @@ public class DidYouKnow03 extends javax.swing.JFrame {
             }
         });
 
-        help.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        help.setForeground(new java.awt.Color(255, 255, 255));
-        help.setText("?");
-        help.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        help.addMouseListener(new java.awt.event.MouseAdapter() {
+        sitlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/logoSIT.png"))); // NOI18N
+
+        buttonPlayAgain.setBackground(new java.awt.Color(102, 204, 255));
+        buttonPlayAgain.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        buttonPlayAgain.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttonPlayAgain.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                helpMouseClicked(evt);
+                buttonPlayAgainMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                buttonPlayAgainjpanel4exitedCheckButton(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                buttonPlayAgainjpanel4enterCheckButton(evt);
             }
         });
 
-        sitlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/logoSIT.png"))); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("PLAY AGAIN");
+
+        javax.swing.GroupLayout buttonPlayAgainLayout = new javax.swing.GroupLayout(buttonPlayAgain);
+        buttonPlayAgain.setLayout(buttonPlayAgainLayout);
+        buttonPlayAgainLayout.setHorizontalGroup(
+            buttonPlayAgainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonPlayAgainLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        buttonPlayAgainLayout.setVerticalGroup(
+            buttonPlayAgainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonPlayAgainLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addContainerGap())
+        );
+
+        name.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        name.setForeground(new java.awt.Color(255, 255, 255));
+        name.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        name.setText("NAME");
+
+        point.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
+        point.setForeground(new java.awt.Color(255, 255, 255));
+        point.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        point.setText("point");
+
+        game4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/game4.png"))); // NOI18N
+        game4.setText("   ");
 
         javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
         kGradientPanel1.setLayout(kGradientPanel1Layout);
@@ -79,22 +134,36 @@ public class DidYouKnow03 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
-                        .addComponent(home, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(513, 513, 513)
-                        .addComponent(help)
-                        .addGap(14, 14, 14))
+                        .addComponent(buttonPlayAgain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(331, 331, 331))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
                         .addComponent(sitlogo)
-                        .addContainerGap())))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
+                        .addComponent(home, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(542, 542, 542))))
+            .addGroup(kGradientPanel1Layout.createSequentialGroup()
+                .addGap(196, 196, 196)
+                .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(game4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(point, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         kGradientPanel1Layout.setVerticalGroup(
             kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(kGradientPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(help)
-                    .addComponent(home, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 488, Short.MAX_VALUE)
+                .addComponent(home, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addComponent(game4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(point, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(buttonPlayAgain, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(96, 96, 96)
                 .addComponent(sitlogo)
                 .addContainerGap())
         );
@@ -110,10 +179,20 @@ public class DidYouKnow03 extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_homeMouseClicked
 
-    private void helpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMouseClicked
+    private void buttonPlayAgainMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonPlayAgainMouseClicked
+        new DidYouKnow02(this.playName).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_buttonPlayAgainMouseClicked
+
+    private void buttonPlayAgainjpanel4exitedCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonPlayAgainjpanel4exitedCheckButton
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this,"Help");
-    }//GEN-LAST:event_helpMouseClicked
+        resetButtonColor(buttonPlayAgain);
+    }//GEN-LAST:event_buttonPlayAgainjpanel4exitedCheckButton
+
+    private void buttonPlayAgainjpanel4enterCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonPlayAgainjpanel4enterCheckButton
+        // TODO add your handling code here:
+        setButtonColor(buttonPlayAgain);
+    }//GEN-LAST:event_buttonPlayAgainjpanel4enterCheckButton
 
     /**
      * @param args the command line arguments
@@ -156,6 +235,7 @@ public class DidYouKnow03 extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+        
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -164,11 +244,23 @@ public class DidYouKnow03 extends javax.swing.JFrame {
             }
         });
     }
+    
+    public void setButtonColor(JPanel panel) {
+        panel.setBackground(new java.awt.Color(115, 163, 239));
+    }
+
+    public void resetButtonColor(JPanel panel) {
+        panel.setBackground(new java.awt.Color(102, 204, 255));
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel help;
+    private javax.swing.JPanel buttonPlayAgain;
+    private javax.swing.JLabel game4;
     private javax.swing.JLabel home;
+    private javax.swing.JLabel jLabel6;
     private keeptoo.KGradientPanel kGradientPanel1;
+    private javax.swing.JLabel name;
+    private javax.swing.JLabel point;
     private javax.swing.JLabel sitlogo;
     // End of variables declaration//GEN-END:variables
 }

@@ -6,6 +6,7 @@
 package View;
 
 import Model.AllQuestion;
+import Model.Question;
 import javax.swing.JOptionPane;
 
 /**
@@ -30,6 +31,9 @@ public class DidYouKnow02 extends javax.swing.JFrame {
         initComponents();
         name.setText(this.playerName);
         scoreDisplay.setText(""+this.point);
+        allQ = new AllQuestion();
+        setQuestion();
+        status = true;
     }
 
     /**
@@ -48,6 +52,17 @@ public class DidYouKnow02 extends javax.swing.JFrame {
         name = new javax.swing.JLabel();
         textWordName = new javax.swing.JLabel();
         scoreDisplay = new javax.swing.JLabel();
+        textNo = new javax.swing.JLabel();
+        textQuestion = new javax.swing.JLabel();
+        textNo1 = new javax.swing.JLabel();
+        cP1 = new javax.swing.JPanel();
+        c1 = new javax.swing.JLabel();
+        cP2 = new javax.swing.JPanel();
+        c2 = new javax.swing.JLabel();
+        cP3 = new javax.swing.JPanel();
+        c3 = new javax.swing.JLabel();
+        cP4 = new javax.swing.JPanel();
+        c4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("IT OPENHOUSE 2019");
@@ -86,6 +101,142 @@ public class DidYouKnow02 extends javax.swing.JFrame {
         scoreDisplay.setForeground(new java.awt.Color(255, 255, 255));
         scoreDisplay.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
+        textNo.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        textNo.setForeground(new java.awt.Color(102, 0, 51));
+        textNo.setText("1/10");
+
+        textQuestion.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
+        textQuestion.setForeground(new java.awt.Color(255, 255, 255));
+        textQuestion.setText("What is ?????");
+
+        textNo1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        textNo1.setForeground(new java.awt.Color(0, 51, 102));
+        textNo1.setText("QUESTION :");
+
+        cP1.setBackground(new java.awt.Color(255, 255, 255));
+        cP1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        cP1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cP1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cP1MouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                cP1jpanel4exitedCheckButton(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                cP1jpanel4enterCheckButton(evt);
+            }
+        });
+
+        c1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        c1.setForeground(new java.awt.Color(51, 51, 51));
+        c1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        c1.setText("c1");
+
+        javax.swing.GroupLayout cP1Layout = new javax.swing.GroupLayout(cP1);
+        cP1.setLayout(cP1Layout);
+        cP1Layout.setHorizontalGroup(
+            cP1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(c1, javax.swing.GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE)
+        );
+        cP1Layout.setVerticalGroup(
+            cP1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(c1, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+        );
+
+        cP2.setBackground(new java.awt.Color(255, 255, 255));
+        cP2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        cP2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cP2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cP2MouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                cP2jpanel4exitedCheckButton(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                cP2jpanel4enterCheckButton(evt);
+            }
+        });
+
+        c2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        c2.setForeground(new java.awt.Color(51, 51, 51));
+        c2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        c2.setText("c2");
+
+        javax.swing.GroupLayout cP2Layout = new javax.swing.GroupLayout(cP2);
+        cP2.setLayout(cP2Layout);
+        cP2Layout.setHorizontalGroup(
+            cP2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(c2, javax.swing.GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE)
+        );
+        cP2Layout.setVerticalGroup(
+            cP2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(c2, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+        );
+
+        cP3.setBackground(new java.awt.Color(255, 255, 255));
+        cP3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        cP3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cP3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cP3MouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                cP3jpanel4exitedCheckButton(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                cP3jpanel4enterCheckButton(evt);
+            }
+        });
+
+        c3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        c3.setForeground(new java.awt.Color(51, 51, 51));
+        c3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        c3.setText("c3");
+
+        javax.swing.GroupLayout cP3Layout = new javax.swing.GroupLayout(cP3);
+        cP3.setLayout(cP3Layout);
+        cP3Layout.setHorizontalGroup(
+            cP3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(c3, javax.swing.GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE)
+        );
+        cP3Layout.setVerticalGroup(
+            cP3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(c3, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+        );
+
+        cP4.setBackground(new java.awt.Color(255, 255, 255));
+        cP4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        cP4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cP4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cP4MouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                cP4jpanel4exitedCheckButton(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                cP4jpanel4enterCheckButton(evt);
+            }
+        });
+
+        c4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        c4.setForeground(new java.awt.Color(51, 51, 51));
+        c4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        c4.setText("c4");
+
+        javax.swing.GroupLayout cP4Layout = new javax.swing.GroupLayout(cP4);
+        cP4.setLayout(cP4Layout);
+        cP4Layout.setHorizontalGroup(
+            cP4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(c4, javax.swing.GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE)
+        );
+        cP4Layout.setVerticalGroup(
+            cP4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(c4, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
         kGradientPanel1.setLayout(kGradientPanel1Layout);
         kGradientPanel1Layout.setHorizontalGroup(
@@ -97,41 +248,135 @@ public class DidYouKnow02 extends javax.swing.JFrame {
                         .addComponent(sitlogo)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
-                        .addComponent(textWordName)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(textWordScore)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(scoreDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(kGradientPanel1Layout.createSequentialGroup()
+                                .addComponent(textWordName)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)
+                                .addComponent(textWordScore)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(scoreDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, kGradientPanel1Layout.createSequentialGroup()
+                                .addComponent(textNo1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(textNo)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(game4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addGroup(kGradientPanel1Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(textQuestion, javax.swing.GroupLayout.PREFERRED_SIZE, 716, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(kGradientPanel1Layout.createSequentialGroup()
+                        .addComponent(cP3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(cP4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(kGradientPanel1Layout.createSequentialGroup()
+                        .addComponent(cP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(cP2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         kGradientPanel1Layout.setVerticalGroup(
             kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(kGradientPanel1Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addContainerGap()
                 .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                        .addComponent(scoreDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(textWordScore, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textWordName, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(game4, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(kGradientPanel1Layout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                                .addComponent(scoreDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(textWordScore, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textWordName, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(49, 49, 49)
+                        .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(textNo1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textNo, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(textQuestion, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(cP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cP2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cP3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cP4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 165, Short.MAX_VALUE)
                 .addComponent(sitlogo)
                 .addContainerGap())
-            .addGroup(kGradientPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(game4, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(491, 491, 491))
         );
 
-        getContentPane().add(kGradientPanel1, java.awt.BorderLayout.PAGE_START);
+        getContentPane().add(kGradientPanel1, java.awt.BorderLayout.CENTER);
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void cP1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP1MouseClicked
+
+    }//GEN-LAST:event_cP1MouseClicked
+
+    private void cP1jpanel4exitedCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP1jpanel4exitedCheckButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cP1jpanel4exitedCheckButton
+
+    private void cP1jpanel4enterCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP1jpanel4enterCheckButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cP1jpanel4enterCheckButton
+
+    private void cP2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cP2MouseClicked
+
+    private void cP2jpanel4exitedCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP2jpanel4exitedCheckButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cP2jpanel4exitedCheckButton
+
+    private void cP2jpanel4enterCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP2jpanel4enterCheckButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cP2jpanel4enterCheckButton
+
+    private void cP3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cP3MouseClicked
+
+    private void cP3jpanel4exitedCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP3jpanel4exitedCheckButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cP3jpanel4exitedCheckButton
+
+    private void cP3jpanel4enterCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP3jpanel4enterCheckButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cP3jpanel4enterCheckButton
+
+    private void cP4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cP4MouseClicked
+
+    private void cP4jpanel4exitedCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP4jpanel4exitedCheckButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cP4jpanel4exitedCheckButton
+
+    private void cP4jpanel4enterCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP4jpanel4enterCheckButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cP4jpanel4enterCheckButton
+
+    
+    private void setQuestion(){
+        if(!allQ.isLastQuestion()){
+            Question q = allQ.playQ();
+            textQuestion.setText(q.getQuestion());
+            c1.setText(q.getChoice()[0]);
+            c2.setText(q.getChoice()[1]);
+            c3.setText(q.getChoice()[2]);
+            c4.setText(q.getChoice()[3]);
+        }else{
+            
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -175,11 +420,22 @@ public class DidYouKnow02 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel c1;
+    private javax.swing.JLabel c2;
+    private javax.swing.JLabel c3;
+    private javax.swing.JLabel c4;
+    private javax.swing.JPanel cP1;
+    private javax.swing.JPanel cP2;
+    private javax.swing.JPanel cP3;
+    private javax.swing.JPanel cP4;
     private javax.swing.JLabel game4;
     private keeptoo.KGradientPanel kGradientPanel1;
     private javax.swing.JLabel name;
     private javax.swing.JLabel scoreDisplay;
     private javax.swing.JLabel sitlogo;
+    private javax.swing.JLabel textNo;
+    private javax.swing.JLabel textNo1;
+    private javax.swing.JLabel textQuestion;
     private javax.swing.JLabel textWordName;
     private javax.swing.JLabel textWordScore;
     // End of variables declaration//GEN-END:variables
