@@ -11,11 +11,11 @@ import javax.swing.JOptionPane;
  *
  * @author jatawatsafe
  */
-public class DidYouKnow extends javax.swing.JFrame {
+public class DidYouKnow03 extends javax.swing.JFrame {
     /**
      * Creates new form TemplateJFrame
      */
-    public DidYouKnow() {
+    public DidYouKnow03() {
         initComponents();
     }
 
@@ -31,6 +31,7 @@ public class DidYouKnow extends javax.swing.JFrame {
         kGradientPanel1 = new keeptoo.KGradientPanel();
         home = new javax.swing.JLabel();
         help = new javax.swing.JLabel();
+        sitlogo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("IT OPENHOUSE 2019");
@@ -68,16 +69,23 @@ public class DidYouKnow extends javax.swing.JFrame {
             }
         });
 
+        sitlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/logoSIT.png"))); // NOI18N
+
         javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
         kGradientPanel1.setLayout(kGradientPanel1Layout);
         kGradientPanel1Layout.setHorizontalGroup(
             kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
+            .addGroup(kGradientPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(home, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(513, 513, 513)
-                .addComponent(help)
-                .addGap(14, 14, 14))
+                .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
+                        .addComponent(home, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(513, 513, 513)
+                        .addComponent(help)
+                        .addGap(14, 14, 14))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
+                        .addComponent(sitlogo)
+                        .addContainerGap())))
         );
         kGradientPanel1Layout.setVerticalGroup(
             kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,7 +94,9 @@ public class DidYouKnow extends javax.swing.JFrame {
                 .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(help)
                     .addComponent(home, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(546, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 488, Short.MAX_VALUE)
+                .addComponent(sitlogo)
+                .addContainerGap())
         );
 
         getContentPane().add(kGradientPanel1, java.awt.BorderLayout.PAGE_START);
@@ -122,21 +132,35 @@ public class DidYouKnow extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DidYouKnow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DidYouKnow03.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DidYouKnow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DidYouKnow03.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DidYouKnow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DidYouKnow03.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DidYouKnow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DidYouKnow03.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DidYouKnow().setVisible(true);
+                new DidYouKnow03().setVisible(true);
             }
         });
     }
@@ -145,5 +169,6 @@ public class DidYouKnow extends javax.swing.JFrame {
     private javax.swing.JLabel help;
     private javax.swing.JLabel home;
     private keeptoo.KGradientPanel kGradientPanel1;
+    private javax.swing.JLabel sitlogo;
     // End of variables declaration//GEN-END:variables
 }

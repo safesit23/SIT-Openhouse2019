@@ -215,7 +215,7 @@ public class HomePage extends javax.swing.JFrame {
     }//GEN-LAST:event_actionWeightConverter
 
     private void actionMultipleChoice(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_actionMultipleChoice
-        new DidYouKnow().setVisible(true);
+        new DidYouKnow01().setVisible(true);
         this.setVisible(false);
         // TODO add your handling code here:
     }//GEN-LAST:event_actionMultipleChoice
