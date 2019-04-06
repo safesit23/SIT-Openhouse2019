@@ -6,6 +6,7 @@
 package View;
 
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
@@ -32,6 +33,11 @@ public class DidYouKnow01 extends javax.swing.JFrame {
         home = new javax.swing.JLabel();
         help = new javax.swing.JLabel();
         sitlogo = new javax.swing.JLabel();
+        labelName = new javax.swing.JLabel();
+        game4 = new javax.swing.JLabel();
+        playerName = new javax.swing.JTextField();
+        buttonStartGame = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("IT OPENHOUSE 2019");
@@ -72,11 +78,64 @@ public class DidYouKnow01 extends javax.swing.JFrame {
 
         sitlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/logoSIT.png"))); // NOI18N
 
+        labelName.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        labelName.setForeground(new java.awt.Color(255, 255, 255));
+        labelName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelName.setText("ENTER YOUR NAME");
+
+        game4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/game4.png"))); // NOI18N
+        game4.setText("   ");
+
+        playerName.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        playerName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        playerName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                playerNameActionPerformed(evt);
+            }
+        });
+
+        buttonStartGame.setBackground(new java.awt.Color(102, 204, 255));
+        buttonStartGame.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        buttonStartGame.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttonStartGame.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonStartGameMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                buttonStartGamejpanel4exitedCheckButton(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                buttonStartGamejpanel4enterCheckButton(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("START GAME");
+
+        javax.swing.GroupLayout buttonStartGameLayout = new javax.swing.GroupLayout(buttonStartGame);
+        buttonStartGame.setLayout(buttonStartGameLayout);
+        buttonStartGameLayout.setHorizontalGroup(
+            buttonStartGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonStartGameLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        buttonStartGameLayout.setVerticalGroup(
+            buttonStartGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonStartGameLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
         kGradientPanel1.setLayout(kGradientPanel1Layout);
         kGradientPanel1Layout.setHorizontalGroup(
             kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kGradientPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
@@ -87,6 +146,14 @@ public class DidYouKnow01 extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
                         .addComponent(sitlogo)
                         .addContainerGap())))
+            .addGroup(kGradientPanel1Layout.createSequentialGroup()
+                .addGap(277, 277, 277)
+                .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(game4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelName, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(playerName, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonStartGame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         kGradientPanel1Layout.setVerticalGroup(
             kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -95,7 +162,15 @@ public class DidYouKnow01 extends javax.swing.JFrame {
                 .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(help)
                     .addComponent(home, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 488, Short.MAX_VALUE)
+                .addGap(44, 44, 44)
+                .addComponent(game4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(labelName, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(playerName, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(buttonStartGame, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
                 .addComponent(sitlogo)
                 .addContainerGap())
         );
@@ -115,6 +190,25 @@ public class DidYouKnow01 extends javax.swing.JFrame {
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(this,"Help");
     }//GEN-LAST:event_helpMouseClicked
+
+    private void playerNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_playerNameActionPerformed
+
+    private void buttonStartGameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonStartGameMouseClicked
+            new DidYouKnow02(playerName.getText()).setVisible(true);
+            this.setVisible(false);
+    }//GEN-LAST:event_buttonStartGameMouseClicked
+
+    private void buttonStartGamejpanel4exitedCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonStartGamejpanel4exitedCheckButton
+        // TODO add your handling code here:
+        resetButtonColor(buttonStartGame);
+    }//GEN-LAST:event_buttonStartGamejpanel4exitedCheckButton
+
+    private void buttonStartGamejpanel4enterCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonStartGamejpanel4enterCheckButton
+        // TODO add your handling code here:
+        setButtonColor(buttonStartGame);
+    }//GEN-LAST:event_buttonStartGamejpanel4enterCheckButton
 
     /**
      * @param args the command line arguments
@@ -153,11 +247,24 @@ public class DidYouKnow01 extends javax.swing.JFrame {
             }
         });
     }
+    
+    public void setButtonColor(JPanel panel) {
+        panel.setBackground(new java.awt.Color(115, 163, 239));
+    }
+
+    public void resetButtonColor(JPanel panel) {
+        panel.setBackground(new java.awt.Color(102, 204, 255));
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel buttonStartGame;
+    private javax.swing.JLabel game4;
     private javax.swing.JLabel help;
     private javax.swing.JLabel home;
+    private javax.swing.JLabel jLabel6;
     private keeptoo.KGradientPanel kGradientPanel1;
+    private javax.swing.JLabel labelName;
+    private javax.swing.JTextField playerName;
     private javax.swing.JLabel sitlogo;
     // End of variables declaration//GEN-END:variables
 }

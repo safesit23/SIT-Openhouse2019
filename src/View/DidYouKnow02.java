@@ -5,6 +5,7 @@
  */
 package View;
 
+import Model.AllQuestion;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,11 +13,23 @@ import javax.swing.JOptionPane;
  * @author jatawatsafe
  */
 public class DidYouKnow02 extends javax.swing.JFrame {
+    private String playerName;
+    private int point;
+    private boolean status;
+    private AllQuestion allQ;
     /**
      * Creates new form TemplateJFrame
      */
     public DidYouKnow02() {
         initComponents();
+    }
+    
+    public DidYouKnow02(String playerName) {
+        this.playerName = playerName;
+        point = 0;
+        initComponents();
+        name.setText(this.playerName);
+        scoreDisplay.setText(""+this.point);
     }
 
     /**
@@ -29,9 +42,12 @@ public class DidYouKnow02 extends javax.swing.JFrame {
     private void initComponents() {
 
         kGradientPanel1 = new keeptoo.KGradientPanel();
-        home = new javax.swing.JLabel();
-        help = new javax.swing.JLabel();
         sitlogo = new javax.swing.JLabel();
+        game4 = new javax.swing.JLabel();
+        textWordScore = new javax.swing.JLabel();
+        name = new javax.swing.JLabel();
+        textWordName = new javax.swing.JLabel();
+        scoreDisplay = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("IT OPENHOUSE 2019");
@@ -47,29 +63,28 @@ public class DidYouKnow02 extends javax.swing.JFrame {
         kGradientPanel1.setMinimumSize(new java.awt.Dimension(846, 602));
         kGradientPanel1.setPreferredSize(new java.awt.Dimension(846, 602));
 
-        home.setFont(new java.awt.Font("Arial", 1, 30)); // NOI18N
-        home.setForeground(new java.awt.Color(255, 255, 255));
-        home.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/Group.png"))); // NOI18N
-        home.setText("OpenHouse 2019");
-        home.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        home.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                homeMouseClicked(evt);
-            }
-        });
-
-        help.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        help.setForeground(new java.awt.Color(255, 255, 255));
-        help.setText("?");
-        help.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        help.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                helpMouseClicked(evt);
-            }
-        });
-
         sitlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/logoSIT.png"))); // NOI18N
+
+        game4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/game4.png"))); // NOI18N
+        game4.setText("   ");
+
+        textWordScore.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        textWordScore.setForeground(new java.awt.Color(255, 255, 255));
+        textWordScore.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        textWordScore.setText("SCORE:");
+
+        name.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        name.setForeground(new java.awt.Color(255, 255, 255));
+        name.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+
+        textWordName.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        textWordName.setForeground(new java.awt.Color(255, 255, 255));
+        textWordName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        textWordName.setText("PLAYER: ");
+
+        scoreDisplay.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        scoreDisplay.setForeground(new java.awt.Color(255, 255, 255));
+        scoreDisplay.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
         kGradientPanel1.setLayout(kGradientPanel1Layout);
@@ -79,24 +94,36 @@ public class DidYouKnow02 extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
-                        .addComponent(home, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(513, 513, 513)
-                        .addComponent(help)
-                        .addGap(14, 14, 14))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
                         .addComponent(sitlogo)
-                        .addContainerGap())))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kGradientPanel1Layout.createSequentialGroup()
+                        .addComponent(textWordName)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(textWordScore)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(scoreDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(game4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         kGradientPanel1Layout.setVerticalGroup(
             kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(kGradientPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(27, 27, 27)
                 .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(help)
-                    .addComponent(home, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 488, Short.MAX_VALUE)
+                    .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                        .addComponent(scoreDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textWordScore, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textWordName, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(sitlogo)
                 .addContainerGap())
+            .addGroup(kGradientPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(game4, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(491, 491, 491))
         );
 
         getContentPane().add(kGradientPanel1, java.awt.BorderLayout.PAGE_START);
@@ -104,16 +131,6 @@ public class DidYouKnow02 extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseClicked
-        new HomePage().setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_homeMouseClicked
-
-    private void helpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMouseClicked
-        // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this,"Help");
-    }//GEN-LAST:event_helpMouseClicked
 
     /**
      * @param args the command line arguments
@@ -158,9 +175,12 @@ public class DidYouKnow02 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel help;
-    private javax.swing.JLabel home;
+    private javax.swing.JLabel game4;
     private keeptoo.KGradientPanel kGradientPanel1;
+    private javax.swing.JLabel name;
+    private javax.swing.JLabel scoreDisplay;
     private javax.swing.JLabel sitlogo;
+    private javax.swing.JLabel textWordName;
+    private javax.swing.JLabel textWordScore;
     // End of variables declaration//GEN-END:variables
 }
