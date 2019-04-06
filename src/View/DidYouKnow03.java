@@ -28,6 +28,7 @@ public class DidYouKnow03 extends javax.swing.JFrame {
         this.score = score;
         initComponents();
         this.name.setText(playName);
+        this.point.setText(this.score+" point");
     }
 
     /**

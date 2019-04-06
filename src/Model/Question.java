@@ -57,7 +57,7 @@ public class Question implements Comparable<Question>{
     }
 
     public int getKey() {
-        return key;
+        return key+1;
     }
 
     public void setKey(int key) {
@@ -65,7 +65,7 @@ public class Question implements Comparable<Question>{
     }
     
     public boolean check(int ans){
-        if(ans==key){
+        if((ans-1)==key){
             return true;
         }else{
             return false;

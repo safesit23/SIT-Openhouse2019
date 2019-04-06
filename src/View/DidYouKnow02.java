@@ -7,7 +7,9 @@ package View;
 
 import Model.AllQuestion;
 import Model.Question;
+import javafx.scene.paint.Color;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
@@ -63,6 +65,10 @@ public class DidYouKnow02 extends javax.swing.JFrame {
         c3 = new javax.swing.JLabel();
         cP4 = new javax.swing.JPanel();
         c4 = new javax.swing.JLabel();
+        buttonEndGame = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        buttonNextQ = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("IT OPENHOUSE 2019");
@@ -103,7 +109,7 @@ public class DidYouKnow02 extends javax.swing.JFrame {
 
         textNo.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         textNo.setForeground(new java.awt.Color(102, 0, 51));
-        textNo.setText("1/10");
+        textNo.setText("0/10");
 
         textQuestion.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
         textQuestion.setForeground(new java.awt.Color(255, 255, 255));
@@ -237,6 +243,74 @@ public class DidYouKnow02 extends javax.swing.JFrame {
             .addComponent(c4, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
         );
 
+        buttonEndGame.setBackground(new java.awt.Color(102, 204, 255));
+        buttonEndGame.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        buttonEndGame.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttonEndGame.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonEndGameMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                buttonEndGamejpanel4exitedCheckButton(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                buttonEndGamejpanel4enterCheckButton(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("END GAME");
+
+        javax.swing.GroupLayout buttonEndGameLayout = new javax.swing.GroupLayout(buttonEndGame);
+        buttonEndGame.setLayout(buttonEndGameLayout);
+        buttonEndGameLayout.setHorizontalGroup(
+            buttonEndGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
+        );
+        buttonEndGameLayout.setVerticalGroup(
+            buttonEndGameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonEndGameLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addContainerGap())
+        );
+
+        buttonNextQ.setBackground(new java.awt.Color(102, 204, 255));
+        buttonNextQ.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        buttonNextQ.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttonNextQ.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttonNextQMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                buttonNextQjpanel4exitedCheckButton(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                buttonNextQjpanel4enterCheckButton(evt);
+            }
+        });
+
+        jLabel8.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("NEXT QUESTION");
+
+        javax.swing.GroupLayout buttonNextQLayout = new javax.swing.GroupLayout(buttonNextQ);
+        buttonNextQ.setLayout(buttonNextQLayout);
+        buttonNextQLayout.setHorizontalGroup(
+            buttonNextQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        buttonNextQLayout.setVerticalGroup(
+            buttonNextQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, buttonNextQLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
         kGradientPanel1.setLayout(kGradientPanel1Layout);
         kGradientPanel1Layout.setHorizontalGroup(
@@ -264,17 +338,23 @@ public class DidYouKnow02 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(game4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
             .addGroup(kGradientPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
                 .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(textQuestion, javax.swing.GroupLayout.PREFERRED_SIZE, 716, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(kGradientPanel1Layout.createSequentialGroup()
-                        .addComponent(cP3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(cP4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(21, 21, 21)
+                        .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(textQuestion, javax.swing.GroupLayout.PREFERRED_SIZE, 716, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(kGradientPanel1Layout.createSequentialGroup()
+                                .addComponent(cP3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(cP4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(kGradientPanel1Layout.createSequentialGroup()
+                                .addComponent(cP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(cP2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(buttonEndGame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(kGradientPanel1Layout.createSequentialGroup()
-                        .addComponent(cP1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(cP2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(320, 320, 320)
+                        .addComponent(buttonNextQ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         kGradientPanel1Layout.setVerticalGroup(
@@ -305,8 +385,12 @@ public class DidYouKnow02 extends javax.swing.JFrame {
                 .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cP3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cP4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 165, Short.MAX_VALUE)
-                .addComponent(sitlogo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addComponent(buttonNextQ, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61)
+                .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(sitlogo)
+                    .addComponent(buttonEndGame, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -317,7 +401,20 @@ public class DidYouKnow02 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cP1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP1MouseClicked
-
+        if(status){
+            if(allQ.playQ().check(1)){
+                //ans true
+                point+=1000;
+                cP1.setBackground(new java.awt.Color(0, 239, 0));
+                scoreDisplay.setText(""+this.point);
+            }else{
+                //ans false
+                cP1.setBackground(new java.awt.Color(255, 0, 0));
+                keyAnsColor();
+            }
+            allQ.nextQ();
+            status = false;
+        }
     }//GEN-LAST:event_cP1MouseClicked
 
     private void cP1jpanel4exitedCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP1jpanel4exitedCheckButton
@@ -329,7 +426,20 @@ public class DidYouKnow02 extends javax.swing.JFrame {
     }//GEN-LAST:event_cP1jpanel4enterCheckButton
 
     private void cP2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP2MouseClicked
-        // TODO add your handling code here:
+        if(status){
+            if(allQ.playQ().check(2)){
+                //ans true
+                point+=1000;
+                cP2.setBackground(new java.awt.Color(0, 239, 0));
+                scoreDisplay.setText(""+this.point);
+            }else{
+                //ans false
+                cP2.setBackground(new java.awt.Color(255, 0, 0));
+                keyAnsColor();
+            }
+            allQ.nextQ();
+            status = false;
+        }
     }//GEN-LAST:event_cP2MouseClicked
 
     private void cP2jpanel4exitedCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP2jpanel4exitedCheckButton
@@ -341,7 +451,20 @@ public class DidYouKnow02 extends javax.swing.JFrame {
     }//GEN-LAST:event_cP2jpanel4enterCheckButton
 
     private void cP3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP3MouseClicked
-        // TODO add your handling code here:
+        if(status){
+            if(allQ.playQ().check(3)){
+                //ans true
+                point+=1000;
+                cP3.setBackground(new java.awt.Color(0, 239, 0));
+                scoreDisplay.setText(""+this.point);
+            }else{
+                //ans false
+                cP3.setBackground(new java.awt.Color(255, 0, 0));
+                keyAnsColor();
+            }
+            allQ.nextQ();
+            status = false;
+        }
     }//GEN-LAST:event_cP3MouseClicked
 
     private void cP3jpanel4exitedCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP3jpanel4exitedCheckButton
@@ -353,7 +476,20 @@ public class DidYouKnow02 extends javax.swing.JFrame {
     }//GEN-LAST:event_cP3jpanel4enterCheckButton
 
     private void cP4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP4MouseClicked
-        // TODO add your handling code here:
+        if(status){
+            if(allQ.playQ().check(4)){
+                //ans true
+                point+=1000;
+                cP4.setBackground(new java.awt.Color(0, 239, 0));
+                scoreDisplay.setText(""+this.point);
+            }else{
+                //ans false
+                cP4.setBackground(new java.awt.Color(255, 0, 0));
+                keyAnsColor();
+            }
+            allQ.nextQ();
+            status = false;
+        }
     }//GEN-LAST:event_cP4MouseClicked
 
     private void cP4jpanel4exitedCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP4jpanel4exitedCheckButton
@@ -364,18 +500,47 @@ public class DidYouKnow02 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cP4jpanel4enterCheckButton
 
+    private void buttonEndGameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonEndGameMouseClicked
+        new DidYouKnow03(this.playerName, this.point).setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_buttonEndGameMouseClicked
+
+    private void buttonEndGamejpanel4exitedCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonEndGamejpanel4exitedCheckButton
+        // TODO add your handling code here:
+        resetButtonColor(buttonEndGame);
+    }//GEN-LAST:event_buttonEndGamejpanel4exitedCheckButton
+
+    private void buttonEndGamejpanel4enterCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonEndGamejpanel4enterCheckButton
+        // TODO add your handling code here:
+        setButtonColor(buttonEndGame);
+    }//GEN-LAST:event_buttonEndGamejpanel4enterCheckButton
+
+    private void buttonNextQMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonNextQMouseClicked
+        setQuestion();
+    }//GEN-LAST:event_buttonNextQMouseClicked
+
+    private void buttonNextQjpanel4exitedCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonNextQjpanel4exitedCheckButton
+        resetButtonColor(buttonNextQ);
+    }//GEN-LAST:event_buttonNextQjpanel4exitedCheckButton
+
+    private void buttonNextQjpanel4enterCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonNextQjpanel4enterCheckButton
+        setButtonColor(buttonNextQ);
+    }//GEN-LAST:event_buttonNextQjpanel4enterCheckButton
+
     
     private void setQuestion(){
-        if(!allQ.isLastQuestion()){
+        if(allQ.isLastQuestion()){
+            buttonNextQ.setVisible(false);
+        }
             Question q = allQ.playQ();
+            textNo.setText(allQ.getCount()+"/"+allQ.getTotalQ());
             textQuestion.setText(q.getQuestion());
+            clearAnsColor();
             c1.setText(q.getChoice()[0]);
             c2.setText(q.getChoice()[1]);
             c3.setText(q.getChoice()[2]);
             c4.setText(q.getChoice()[3]);
-        }else{
-            
-        }
+            status = true;
     }
     /**
      * @param args the command line arguments
@@ -418,8 +583,34 @@ public class DidYouKnow02 extends javax.swing.JFrame {
             }
         });
     }
+    public void keyAnsColor(){
+        switch(allQ.playQ().getKey()){
+            case 1 : cP1.setBackground(new java.awt.Color(0, 255, 0));  break;
+            case 2 : cP2.setBackground(new java.awt.Color(0, 255, 0));  break;
+            case 3 : cP3.setBackground(new java.awt.Color(0, 255, 0));  break;
+            case 4 : cP4.setBackground(new java.awt.Color(0, 255, 0));  break;
+        }
+    }
+    
+    public void clearAnsColor(){
+        cP1.setBackground(new java.awt.Color(255, 255, 255));  
+        cP2.setBackground(new java.awt.Color(255, 255, 255));  
+        cP3.setBackground(new java.awt.Color(255, 255, 255));  
+        cP4.setBackground(new java.awt.Color(255, 255, 255));  
+    }
+    
+    public void setButtonColor(JPanel panel) {
+        panel.setBackground(new java.awt.Color(115, 163, 239));
+    }
+
+    public void resetButtonColor(JPanel panel) {
+        panel.setBackground(new java.awt.Color(102, 204, 255));
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel buttonEndGame;
+    private javax.swing.JPanel buttonEndGame1;
+    private javax.swing.JPanel buttonNextQ;
     private javax.swing.JLabel c1;
     private javax.swing.JLabel c2;
     private javax.swing.JLabel c3;
@@ -429,6 +620,9 @@ public class DidYouKnow02 extends javax.swing.JFrame {
     private javax.swing.JPanel cP3;
     private javax.swing.JPanel cP4;
     private javax.swing.JLabel game4;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private keeptoo.KGradientPanel kGradientPanel1;
     private javax.swing.JLabel name;
     private javax.swing.JLabel scoreDisplay;
