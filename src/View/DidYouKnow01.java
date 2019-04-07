@@ -188,7 +188,7 @@ public class DidYouKnow01 extends javax.swing.JFrame {
 
     private void helpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMouseClicked
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this,"Help");
+        JOptionPane.showMessageDialog(this,"Enter your name and start quiz about IT knowledge.");
     }//GEN-LAST:event_helpMouseClicked
 
     private void playerNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerNameActionPerformed
