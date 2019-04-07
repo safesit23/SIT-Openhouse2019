@@ -418,11 +418,15 @@ public class DidYouKnow02 extends javax.swing.JFrame {
     }//GEN-LAST:event_cP1MouseClicked
 
     private void cP1jpanel4exitedCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP1jpanel4exitedCheckButton
-        // TODO add your handling code here:
+        if(status){
+            cP1.setBackground(new java.awt.Color(255, 255, 255));
+        }
     }//GEN-LAST:event_cP1jpanel4exitedCheckButton
 
     private void cP1jpanel4enterCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP1jpanel4enterCheckButton
-        // TODO add your handling code here:
+        if(status){
+            cP1.setBackground(new java.awt.Color(230,230,230));
+        }
     }//GEN-LAST:event_cP1jpanel4enterCheckButton
 
     private void cP2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP2MouseClicked
@@ -443,11 +447,15 @@ public class DidYouKnow02 extends javax.swing.JFrame {
     }//GEN-LAST:event_cP2MouseClicked
 
     private void cP2jpanel4exitedCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP2jpanel4exitedCheckButton
-        // TODO add your handling code here:
+        if(status){
+            cP2.setBackground(new java.awt.Color(255, 255, 255));
+        }
     }//GEN-LAST:event_cP2jpanel4exitedCheckButton
 
     private void cP2jpanel4enterCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP2jpanel4enterCheckButton
-        // TODO add your handling code here:
+        if(status){
+            cP2.setBackground(new java.awt.Color(230,230,230));
+        }
     }//GEN-LAST:event_cP2jpanel4enterCheckButton
 
     private void cP3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP3MouseClicked
@@ -468,11 +476,15 @@ public class DidYouKnow02 extends javax.swing.JFrame {
     }//GEN-LAST:event_cP3MouseClicked
 
     private void cP3jpanel4exitedCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP3jpanel4exitedCheckButton
-        // TODO add your handling code here:
+        if(status){
+            cP3.setBackground(new java.awt.Color(255, 255, 255));
+        }
     }//GEN-LAST:event_cP3jpanel4exitedCheckButton
 
     private void cP3jpanel4enterCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP3jpanel4enterCheckButton
-        // TODO add your handling code here:
+        if(status){
+            cP3.setBackground(new java.awt.Color(230,230,230));
+        }
     }//GEN-LAST:event_cP3jpanel4enterCheckButton
 
     private void cP4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP4MouseClicked
@@ -493,11 +505,15 @@ public class DidYouKnow02 extends javax.swing.JFrame {
     }//GEN-LAST:event_cP4MouseClicked
 
     private void cP4jpanel4exitedCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP4jpanel4exitedCheckButton
-        // TODO add your handling code here:
+        if(status){
+            cP4.setBackground(new java.awt.Color(255, 255, 255));
+        }
     }//GEN-LAST:event_cP4jpanel4exitedCheckButton
 
     private void cP4jpanel4enterCheckButton(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cP4jpanel4enterCheckButton
-        // TODO add your handling code here:
+        if(status){
+            cP4.setBackground(new java.awt.Color(230,230,230));
+        }
     }//GEN-LAST:event_cP4jpanel4enterCheckButton
 
     private void buttonEndGameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonEndGameMouseClicked
