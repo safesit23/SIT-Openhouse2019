@@ -47,7 +47,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
 
     public GuessTheNumber() {
         initComponents();
-        System.out.println("Number: "+goal);
+        //System.out.println("Number: "+goal);
         //jPanel5.setOpaque(false);
         jTextField1.setDocument(new JTextFieldCharLimit(3));
     }
@@ -489,7 +489,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
         this.jLabel4.setText("");
         jTextField1.setText("");
         this.jLabel3.setText("?");
-        System.out.println(">>Reset Number: "+goal);
+        //System.out.println(">>Reset Number: "+goal);
     }
     
     public void setButtonColor(JPanel panel) {
