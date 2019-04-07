@@ -405,11 +405,11 @@ public class DidYouKnow02 extends javax.swing.JFrame {
             if(allQ.playQ().check(1)){
                 //ans true
                 point+=1000;
-                cP1.setBackground(new java.awt.Color(0, 239, 0));
+                cP1.setBackground(new java.awt.Color(156, 255, 141));
                 scoreDisplay.setText(""+this.point);
             }else{
                 //ans false
-                cP1.setBackground(new java.awt.Color(255, 0, 0));
+                cP1.setBackground(new java.awt.Color(255, 113, 108));
                 keyAnsColor();
             }
             allQ.nextQ();
@@ -430,11 +430,11 @@ public class DidYouKnow02 extends javax.swing.JFrame {
             if(allQ.playQ().check(2)){
                 //ans true
                 point+=1000;
-                cP2.setBackground(new java.awt.Color(0, 239, 0));
+                cP2.setBackground(new java.awt.Color(156, 255, 141));
                 scoreDisplay.setText(""+this.point);
             }else{
                 //ans false
-                cP2.setBackground(new java.awt.Color(255, 0, 0));
+                cP2.setBackground(new java.awt.Color(255, 113, 108));
                 keyAnsColor();
             }
             allQ.nextQ();
@@ -455,11 +455,11 @@ public class DidYouKnow02 extends javax.swing.JFrame {
             if(allQ.playQ().check(3)){
                 //ans true
                 point+=1000;
-                cP3.setBackground(new java.awt.Color(0, 239, 0));
+                cP3.setBackground(new java.awt.Color(156, 255, 141));
                 scoreDisplay.setText(""+this.point);
             }else{
                 //ans false
-                cP3.setBackground(new java.awt.Color(255, 0, 0));
+                cP3.setBackground(new java.awt.Color(255, 113, 108));
                 keyAnsColor();
             }
             allQ.nextQ();
@@ -480,11 +480,11 @@ public class DidYouKnow02 extends javax.swing.JFrame {
             if(allQ.playQ().check(4)){
                 //ans true
                 point+=1000;
-                cP4.setBackground(new java.awt.Color(0, 239, 0));
+                cP4.setBackground(new java.awt.Color(156, 255, 141));
                 scoreDisplay.setText(""+this.point);
             }else{
                 //ans false
-                cP4.setBackground(new java.awt.Color(255, 0, 0));
+                cP4.setBackground(new java.awt.Color(255, 113, 108));
                 keyAnsColor();
             }
             allQ.nextQ();
@@ -585,10 +585,10 @@ public class DidYouKnow02 extends javax.swing.JFrame {
     }
     public void keyAnsColor(){
         switch(allQ.playQ().getKey()){
-            case 1 : cP1.setBackground(new java.awt.Color(0, 255, 0));  break;
-            case 2 : cP2.setBackground(new java.awt.Color(0, 255, 0));  break;
-            case 3 : cP3.setBackground(new java.awt.Color(0, 255, 0));  break;
-            case 4 : cP4.setBackground(new java.awt.Color(0, 255, 0));  break;
+            case 1 : cP1.setBackground(new java.awt.Color(156, 255, 141));  break;
+            case 2 : cP2.setBackground(new java.awt.Color(156, 255, 141));  break;
+            case 3 : cP3.setBackground(new java.awt.Color(156, 255, 141));  break;
+            case 4 : cP4.setBackground(new java.awt.Color(156, 255, 141));  break;
         }
     }
     
