@@ -47,6 +47,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
 
     public GuessTheNumber() {
         initComponents();
+        System.out.println("Number: "+goal);
         //jPanel5.setOpaque(false);
         jTextField1.setDocument(new JTextFieldCharLimit(3));
     }
@@ -114,7 +115,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(102, 204, 255));
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setPreferredSize(new java.awt.Dimension(121, 40));
         jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -126,7 +127,8 @@ public class GuessTheNumber extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Clear");
         jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -153,7 +155,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
             .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(102, 204, 255));
         jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel2.setPreferredSize(new java.awt.Dimension(221, 45));
         jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -165,7 +167,8 @@ public class GuessTheNumber extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Check");
         jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -192,7 +195,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
             .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
         );
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBackground(new java.awt.Color(102, 204, 255));
         jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel4.setPreferredSize(new java.awt.Dimension(221, 45));
@@ -208,10 +211,14 @@ public class GuessTheNumber extends javax.swing.JFrame {
             }
         });
 
-        jLabel9.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Reset");
         jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                reset(evt);
+            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 hoverJLabel9Exited(evt);
             }
@@ -224,10 +231,10 @@ public class GuessTheNumber extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(jLabel9)
-                .addContainerGap(68, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(54, Short.MAX_VALUE)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -422,9 +429,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
     }//GEN-LAST:event_helpMouseClicked
 
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
-        GuessTheNumber guess = new GuessTheNumber();
-        this.setVisible(false);
-        guess.setVisible(true);
+        resetNumber();
     }//GEN-LAST:event_jPanel4MouseClicked
 
     private void HoverjPanel2(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HoverjPanel2
@@ -475,12 +480,24 @@ public class GuessTheNumber extends javax.swing.JFrame {
         resetButtonColor(jPanel1);
     }//GEN-LAST:event_hoverJLabel7Exited
 
+    private void reset(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset
+        resetNumber();
+    }//GEN-LAST:event_reset
+
+    private void resetNumber(){
+        this.goal = rd.nextInt(100) + 1;
+        this.jLabel4.setText("");
+        jTextField1.setText("");
+        this.jLabel3.setText("?");
+        System.out.println(">>Reset Number: "+goal);
+    }
+    
     public void setButtonColor(JPanel panel) {
-        panel.setBackground(new java.awt.Color(224, 224, 224));
+        panel.setBackground(new java.awt.Color(115, 163, 239));
     }
 
     public void resetButtonColor(JPanel panel) {
-        panel.setBackground(new java.awt.Color(255, 255, 255));
+        panel.setBackground(new java.awt.Color(102, 204, 255));
     }
 
     /**

@@ -138,6 +138,7 @@ public class PrimeNumberChecker extends javax.swing.JFrame {
 
         output2.setBackground(new java.awt.Color(255, 255, 255));
         output2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        output2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         output2.setLabelFor(field);
 
         javax.swing.GroupLayout fieldLayout = new javax.swing.GroupLayout(field);
@@ -145,14 +146,11 @@ public class PrimeNumberChecker extends javax.swing.JFrame {
         fieldLayout.setHorizontalGroup(
             fieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(fieldLayout.createSequentialGroup()
-                .addContainerGap(54, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(fieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fieldLayout.createSequentialGroup()
-                        .addComponent(output2, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fieldLayout.createSequentialGroup()
-                        .addComponent(output1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31))))
+                    .addComponent(output1, javax.swing.GroupLayout.DEFAULT_SIZE, 269, Short.MAX_VALUE)
+                    .addComponent(output2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         fieldLayout.setVerticalGroup(
             fieldLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
