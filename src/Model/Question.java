@@ -21,7 +21,7 @@ public class Question implements Comparable<Question>{
     static class Compare1 implements Comparator<Question>{
         @Override
         public int compare(Question o1, Question o2) {
-            return o1.choice[1].compareTo(o2.choice[2]);
+            return o1.question.hashCode() - o2.question.hashCode();
         }
         
     }
@@ -29,7 +29,7 @@ public class Question implements Comparable<Question>{
     static class Compare2 implements Comparator<Question>{
         @Override
         public int compare(Question o1, Question o2) {
-            return o1.choice[2].compareTo(o2.choice[1]);
+            return o1.question.compareTo(o2.choice[3]);
         }
         
     }
