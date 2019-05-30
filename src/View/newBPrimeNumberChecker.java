@@ -136,7 +136,6 @@ public class newBPrimeNumberChecker extends javax.swing.JFrame {
         );
 
         jLabel3.setFont(new java.awt.Font("TH SarabunPSK", 0, 48)); // NOI18N
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Windows10\\Desktop\\logo-flat-blk.png")); // NOI18N
         jLabel3.setText("Open House 2019");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);

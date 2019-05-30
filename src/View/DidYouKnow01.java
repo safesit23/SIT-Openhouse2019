@@ -47,9 +47,9 @@ public class DidYouKnow01 extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(846, 602));
 
-        kGradientPanel1.setkEndColor(new java.awt.Color(153, 153, 255));
+        kGradientPanel1.setkEndColor(new java.awt.Color(238, 156, 167));
         kGradientPanel1.setkGradientFocus(90);
-        kGradientPanel1.setkStartColor(new java.awt.Color(102, 204, 255));
+        kGradientPanel1.setkStartColor(new java.awt.Color(255, 221, 225));
         kGradientPanel1.setMaximumSize(new java.awt.Dimension(846, 602));
         kGradientPanel1.setMinimumSize(new java.awt.Dimension(846, 602));
         kGradientPanel1.setPreferredSize(new java.awt.Dimension(846, 602));
@@ -58,7 +58,7 @@ public class DidYouKnow01 extends javax.swing.JFrame {
         home.setForeground(new java.awt.Color(255, 255, 255));
         home.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/Group.png"))); // NOI18N
-        home.setText("OpenHouse 2019");
+        home.setText("WIP CAMP #11");
         home.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         home.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -76,10 +76,9 @@ public class DidYouKnow01 extends javax.swing.JFrame {
             }
         });
 
-        sitlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/logoSIT.png"))); // NOI18N
+        sitlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/111.png"))); // NOI18N
 
         labelName.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        labelName.setForeground(new java.awt.Color(255, 255, 255));
         labelName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelName.setText("ENTER YOUR NAME");
 
@@ -94,7 +93,7 @@ public class DidYouKnow01 extends javax.swing.JFrame {
             }
         });
 
-        buttonStartGame.setBackground(new java.awt.Color(102, 204, 255));
+        buttonStartGame.setBackground(new java.awt.Color(119, 0, 23));
         buttonStartGame.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         buttonStartGame.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         buttonStartGame.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -170,7 +169,7 @@ public class DidYouKnow01 extends javax.swing.JFrame {
                 .addComponent(playerName, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(buttonStartGame, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
                 .addComponent(sitlogo)
                 .addContainerGap())
         );
@@ -249,11 +248,11 @@ public class DidYouKnow01 extends javax.swing.JFrame {
     }
     
     public void setButtonColor(JPanel panel) {
-        panel.setBackground(new java.awt.Color(115, 163, 239));
+        panel.setBackground(new java.awt.Color(214, 81, 107));
     }
 
     public void resetButtonColor(JPanel panel) {
-        panel.setBackground(new java.awt.Color(102, 204, 255));
+        panel.setBackground(new java.awt.Color(119,0,23));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

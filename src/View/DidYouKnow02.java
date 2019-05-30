@@ -77,20 +77,19 @@ public class DidYouKnow02 extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(846, 602));
 
-        kGradientPanel1.setkEndColor(new java.awt.Color(153, 153, 255));
+        kGradientPanel1.setkEndColor(new java.awt.Color(238, 156, 167));
         kGradientPanel1.setkGradientFocus(90);
-        kGradientPanel1.setkStartColor(new java.awt.Color(102, 204, 255));
+        kGradientPanel1.setkStartColor(new java.awt.Color(255, 221, 225));
         kGradientPanel1.setMaximumSize(new java.awt.Dimension(846, 602));
         kGradientPanel1.setMinimumSize(new java.awt.Dimension(846, 602));
         kGradientPanel1.setPreferredSize(new java.awt.Dimension(846, 602));
 
-        sitlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/logoSIT.png"))); // NOI18N
+        sitlogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/111.png"))); // NOI18N
 
         game4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/game4.png"))); // NOI18N
         game4.setText("   ");
 
         textWordScore.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        textWordScore.setForeground(new java.awt.Color(255, 255, 255));
         textWordScore.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         textWordScore.setText("SCORE:");
 
@@ -99,7 +98,6 @@ public class DidYouKnow02 extends javax.swing.JFrame {
         name.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         textWordName.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        textWordName.setForeground(new java.awt.Color(255, 255, 255));
         textWordName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         textWordName.setText("PLAYER: ");
 
@@ -112,7 +110,6 @@ public class DidYouKnow02 extends javax.swing.JFrame {
         textNo.setText("0/10");
 
         textQuestion.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
-        textQuestion.setForeground(new java.awt.Color(255, 255, 255));
         textQuestion.setText("What is ?????");
 
         textNo1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -243,7 +240,7 @@ public class DidYouKnow02 extends javax.swing.JFrame {
             .addComponent(c4, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
         );
 
-        buttonEndGame.setBackground(new java.awt.Color(102, 204, 255));
+        buttonEndGame.setBackground(new java.awt.Color(119, 0, 23));
         buttonEndGame.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         buttonEndGame.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         buttonEndGame.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -277,7 +274,7 @@ public class DidYouKnow02 extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        buttonNextQ.setBackground(new java.awt.Color(102, 204, 255));
+        buttonNextQ.setBackground(new java.awt.Color(119, 0, 23));
         buttonNextQ.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         buttonNextQ.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         buttonNextQ.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -385,7 +382,7 @@ public class DidYouKnow02 extends javax.swing.JFrame {
                 .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cP3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cP4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                 .addComponent(buttonNextQ, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(61, 61, 61)
                 .addGroup(kGradientPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -616,16 +613,15 @@ public class DidYouKnow02 extends javax.swing.JFrame {
     }
     
     public void setButtonColor(JPanel panel) {
-        panel.setBackground(new java.awt.Color(115, 163, 239));
+        panel.setBackground(new java.awt.Color(214, 81, 107));
     }
 
     public void resetButtonColor(JPanel panel) {
-        panel.setBackground(new java.awt.Color(102, 204, 255));
+        panel.setBackground(new java.awt.Color(119,0,23));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel buttonEndGame;
-    private javax.swing.JPanel buttonEndGame1;
     private javax.swing.JPanel buttonNextQ;
     private javax.swing.JLabel c1;
     private javax.swing.JLabel c2;
@@ -637,7 +633,6 @@ public class DidYouKnow02 extends javax.swing.JFrame {
     private javax.swing.JPanel cP4;
     private javax.swing.JLabel game4;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private keeptoo.KGradientPanel kGradientPanel1;
     private javax.swing.JLabel name;

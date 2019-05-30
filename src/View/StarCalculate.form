@@ -68,11 +68,11 @@
     <Container class="keeptoo.KGradientPanel" name="kGradientPanel2">
       <Properties>
         <Property name="kEndColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="99" red="99" type="rgb"/>
+          <Color blue="a7" green="9c" red="ee" type="rgb"/>
         </Property>
         <Property name="kGradientFocus" type="int" value="0"/>
         <Property name="kStartColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="cc" red="66" type="rgb"/>
+          <Color blue="e1" green="dd" red="ff" type="rgb"/>
         </Property>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[846, 602]"/>
@@ -243,7 +243,7 @@
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/View/images/logoSIT.png"/>
+              <Image iconType="3" name="/View/images/111.png"/>
             </Property>
           </Properties>
         </Component>
@@ -401,7 +401,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/View/images/Group.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="OpenHouse 2019"/>
+            <Property name="text" type="java.lang.String" value="WIP CAMP #11"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Hand Cursor"/>
             </Property>

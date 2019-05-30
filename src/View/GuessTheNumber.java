@@ -26,6 +26,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
      */
     private Random rd = new Random();
     private int goal = rd.nextInt(100) + 1;
+    
 
     private static class JTextFieldCharLimit extends PlainDocument {
 
@@ -50,6 +51,8 @@ public class GuessTheNumber extends javax.swing.JFrame {
         //System.out.println("Number: "+goal);
         //jPanel5.setOpaque(false);
         jTextField1.setDocument(new JTextFieldCharLimit(3));
+        //jLabel3.setOpaque(false);
+        jPanel5.setOpaque(false);
     }
 
     /**
@@ -86,9 +89,9 @@ public class GuessTheNumber extends javax.swing.JFrame {
 
         kGradientPanel2.setAlignmentX(0.0F);
         kGradientPanel2.setAlignmentY(0.0F);
-        kGradientPanel2.setkEndColor(new java.awt.Color(153, 153, 255));
+        kGradientPanel2.setkEndColor(new java.awt.Color(238, 156, 167));
         kGradientPanel2.setkGradientFocus(0);
-        kGradientPanel2.setkStartColor(new java.awt.Color(102, 204, 255));
+        kGradientPanel2.setkStartColor(new java.awt.Color(255, 221, 225));
         kGradientPanel2.setMaximumSize(new java.awt.Dimension(846, 602));
         kGradientPanel2.setMinimumSize(new java.awt.Dimension(846, 602));
         kGradientPanel2.setPreferredSize(new java.awt.Dimension(846, 602));
@@ -115,7 +118,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(102, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(119, 0, 23));
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setPreferredSize(new java.awt.Dimension(121, 40));
         jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -155,7 +158,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
             .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel2.setBackground(new java.awt.Color(102, 204, 255));
+        jPanel2.setBackground(new java.awt.Color(119, 0, 23));
         jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel2.setPreferredSize(new java.awt.Dimension(221, 45));
         jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -195,7 +198,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
             .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
         );
 
-        jPanel4.setBackground(new java.awt.Color(102, 204, 255));
+        jPanel4.setBackground(new java.awt.Color(119, 0, 23));
         jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel4.setPreferredSize(new java.awt.Dimension(221, 45));
@@ -290,10 +293,12 @@ public class GuessTheNumber extends javax.swing.JFrame {
         jPanel5.setPreferredSize(new java.awt.Dimension(285, 403));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 140)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("?");
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setPreferredSize(new java.awt.Dimension(300, 72));
 
@@ -317,7 +322,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
         homepage.setForeground(new java.awt.Color(255, 255, 255));
         homepage.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         homepage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/Group.png"))); // NOI18N
-        homepage.setText("OpenHouse 2019");
+        homepage.setText("WIP CAMP #11");
         homepage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         homepage.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -325,7 +330,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/logoSIT.png"))); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/111.png"))); // NOI18N
 
         help.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         help.setForeground(new java.awt.Color(255, 255, 255));
@@ -371,7 +376,7 @@ public class GuessTheNumber extends javax.swing.JFrame {
                 .addGroup(kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(kGradientPanel2Layout.createSequentialGroup()
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(68, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(kGradientPanel2Layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(107, 107, 107)
@@ -493,11 +498,11 @@ public class GuessTheNumber extends javax.swing.JFrame {
     }
     
     public void setButtonColor(JPanel panel) {
-        panel.setBackground(new java.awt.Color(115, 163, 239));
+        panel.setBackground(new java.awt.Color(214, 81, 107));
     }
 
     public void resetButtonColor(JPanel panel) {
-        panel.setBackground(new java.awt.Color(102, 204, 255));
+        panel.setBackground(new java.awt.Color(119,0,23));
     }
 
     /**

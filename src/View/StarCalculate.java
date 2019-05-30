@@ -100,14 +100,14 @@ public class StarCalculate extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(846, 602));
         setResizable(false);
 
-        kGradientPanel2.setkEndColor(new java.awt.Color(153, 153, 255));
+        kGradientPanel2.setkEndColor(new java.awt.Color(238, 156, 167));
         kGradientPanel2.setkGradientFocus(0);
-        kGradientPanel2.setkStartColor(new java.awt.Color(102, 204, 255));
+        kGradientPanel2.setkStartColor(new java.awt.Color(255, 221, 225));
         kGradientPanel2.setMaximumSize(new java.awt.Dimension(846, 602));
         kGradientPanel2.setMinimumSize(new java.awt.Dimension(846, 602));
         kGradientPanel2.setPreferredSize(new java.awt.Dimension(846, 622));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/logoSIT.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/111.png"))); // NOI18N
 
         output2.setBackground(new java.awt.Color(255, 255, 255));
         output2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
@@ -198,7 +198,7 @@ public class StarCalculate extends javax.swing.JFrame {
         homepage.setForeground(new java.awt.Color(255, 255, 255));
         homepage.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         homepage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/images/Group.png"))); // NOI18N
-        homepage.setText("OpenHouse 2019");
+        homepage.setText("WIP CAMP #11");
         homepage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         homepage.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
